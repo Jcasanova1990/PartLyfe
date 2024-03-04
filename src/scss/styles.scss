@@ -1,15 +1,28 @@
 :root {
-  --tan-1: #DAA520;
---tan-2: #6B8E23; 
---tan-3: #A0522D; 
---tan-4: #111111; 
---orange: #FF4500;
-  --text-light: #968c84;
+  --tan-1: #000000;
+  --tan-2: #257500; 
+  --tan-3: #968c84; 
+  --tan-4: #257500; 
+  --orange: #000000;
+  --text-light: #257500;
   --text-dark: #968c84;
+  --white: #ffffff;
+  --trans: #ffffff4b;
 }
 
 *, *:before, *:after {
   box-sizing: border-box;
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  background-image: url('https://static.vecteezy.com/system/resources/previews/024/066/710/large_2x/green-power-close-up-of-processor-motherboard-with-green-leaves-ai-generated-free-photo.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
 }
 
 body {
@@ -19,7 +32,6 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--tan-4);
   padding: 2vmin;
   height: 100vh;
 }
@@ -29,9 +41,14 @@ code {
     monospace;
 }
 
-#root {
-  height: 100%;
-}
+
+  #root {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+  }
 
 .align-ctr {
   text-align: center;
@@ -75,12 +92,16 @@ code {
   text-align: center;
   font-size: 2vmin;
 }
-
+img {
+  max-width: 100%; /* Ensure the logo doesn't exceed its container */
+  margin-bottom: 2vmin; /* Adjust as needed */
+}
 .form-container {
   padding: 3vmin;
-  background-color: var(--tan-1);
+  background-color: var(--trans);
   border: .1vmin solid var(--tan-3);
   border-radius: 1vmin;
+  background-image: url('https://static.vecteezy.com/system/resources/previews/024/066/710/large_2x/green-power-close-up-of-processor-motherboard-with-green-leaves-ai-generated-free-photo.jpg');
 }
 
 p.error-message {
@@ -148,4 +169,23 @@ button:disabled, form:invalid button[type="submit"] {
 button[type="submit"] {
   grid-column: span 2;
   margin: 1vmin 0 0;
+}
+
+button:hover,
+a.button:hover {
+  transform: translateY(-0.2vmin); /* Slightly raise off the page */
+  box-shadow: 0 0.5vmin 1vmin rgba(0, 0, 0, 0.2); /* Add shadow */
+  color: var(--orange); /* Invert text color */
+  background-color: var(--tan-4); /* Invert background color */
+  animation: greenGlow 1s infinite; /* Apply green glow animation */
+}
+
+// KF
+@keyframes greenGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Start with a subtle glow */
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* End with subtle glow */
+  }
 }
