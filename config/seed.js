@@ -19,10 +19,10 @@ const Item = require('../models/item');
 
   await Item.deleteMany({});
   const items = await Item.create([
-    {name: 'GeForce RTX 4090', image: 'public/ProductLogos/nvidia.jpg', category: categories[0], price: 5.95},
-    {name: 'GeForce RTX 4080', image: 'public/ProductLogos/nvidia.jpg', category: categories[0], price: 5.95},
-    {name: 'GeForce RTX 4070', image: 'public/ProductLogos/nvidia.jpg', category: categories[0], price: 5.95},
-    {name: 'GeForce RTX 4060', image: 'public/ProductLogos/nvidia.jpg', category: categories[0], price: 5.95},
+    {name: 'GeForce RTX 4090', image: '/img/nvidia.jpg', category: categories[0], price: 5.95},
+    {name: 'GeForce RTX 4080', image: '/ProductLogos/nvidia.jpg', category: categories[0], price: 5.95},
+    {name: 'GeForce RTX 4070', image: '/ProductLogos/nvidia.jpg', category: categories[0], price: 5.95},
+    {name: 'GeForce RTX 4060', image: '/ProductLogos/nvidia.jpg', category: categories[0], price: 5.95},
     {name: 'GeForce RTX 3090', image: '/productlogos/nvidia.png', category: categories[0], price: 5.95},
     {name: 'GeForce RTX 3080 Ti', image: '/productlogos/nvidia.png', category: categories[0], price: 6.95},
     {name: 'GeForce RTX 3080', image: '/productlogos/nvidia.png', category: categories[0], price: 6.95},
@@ -35,7 +35,7 @@ const Item = require('../models/item');
     {name: 'AMD Radeon RX 7700 XT', image: '/productlogos/amd.png', category: categories[0], price: 6.95},
     {name: 'AMD Radeon RX 7600 XT', image: '/productlogos/amd.png', category: categories[0], price: 6.95},
     {name: 'AMD Radeon RX 7600', image: '/productlogos/amd.png', category: categories[0], price: 6.95},
-    {name: 'AMD Ryzen Threadripper PRO 7995WX', image: '/productlogos/amd.png', category: categories[1], price: 6.95},
+    {name: 'AMD Ryzen Threadripper PRO 7995WX', image: '/amd.png', category: categories[1], price: 6.95},
     {name: 'AMD Ryzen Threadripper PRO 5995WX', image: '/productlogos/amd.png', category: categories[1], price: 6.95},
     {name: 'AMD Ryzen Threadripper PRO 5975WX', image: '/productlogos/amd.png', category: categories[1], price: 6.95},
     {name: 'AMD Ryzen Threadripper 3990X', image: '/productlogos/amd.png', category: categories[1], price: 6.95},

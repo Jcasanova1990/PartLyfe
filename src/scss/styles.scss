@@ -97,6 +97,10 @@ img {
   margin-bottom: 2vmin;
 }
 
+.Logo{
+  width: 50%;
+}
+
 .form-container {
   padding: 3vmin;
   background-color: var(--trans);
@@ -148,7 +152,7 @@ a.button {
   text-decoration: none;
   text-align: center;
   border: .1vmin solid var(--tan-2);
-  border-radius: 50%; /* Make buttons circular */
+  border-radius: 50%; 
   outline: none;
   cursor: pointer;
 }
@@ -182,6 +186,7 @@ a.button:hover {
   background-color: var(--tan-4);
   animation: greenGlow 1s infinite;
 }
+
 
 @keyframes greenGlow {
   0% {

@@ -7,19 +7,21 @@
   padding: 2vmin;
   color: var(--text-light);
   background-color: var(--white);
-  /* border: .1vmin solid var(--tan-3);*/
+ border: .1vmin solid var(--tan-3);
   border: 5px solid black;
   border-radius: 1vmin;
   font-size: 4vmin;
 }
 
 .MenuListItem .image {
+  
   height: 8vw;
   font-size: 3vw;
   background-color: var(--tan-1);
   border: .1vmin solid var(--tan-3);
   border-radius: 1vmin;
 }
+
 
 .MenuListItem .buy {
   display: flex;
