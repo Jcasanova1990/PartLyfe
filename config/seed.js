@@ -19,10 +19,10 @@ const Item = require('../models/item');
 
   await Item.deleteMany({});
   const items = await Item.create([
-    {name: 'GeForce RTX 4090', image: 'https://www.nvidia.com/content/dam/en-zz/Solutions/about-nvidia/logo-and-brand/02-nvidia-logo-color-grn-500x200-4c25-p@2x.png', category: categories[0], price: 5.95},
-    {name: 'GeForce RTX 4080', image: 'public/productlogos/nvidia.png', category: categories[0], price: 5.95},
-    {name: 'GeForce RTX 4070', image: '/media/oni/300gb0/school_work/software_classwork/unit3/PartRush/public/ProductLogos/nvidia.png', category: categories[0], price: 5.95},
-    {name: 'GeForce RTX 4060', image: 'nvidia.png', category: categories[0], price: 5.95},
+    {name: 'GeForce RTX 4090', image: 'public/ProductLogos/nvidia.jpg', category: categories[0], price: 5.95},
+    {name: 'GeForce RTX 4080', image: 'public/ProductLogos/nvidia.jpg', category: categories[0], price: 5.95},
+    {name: 'GeForce RTX 4070', image: 'public/ProductLogos/nvidia.jpg', category: categories[0], price: 5.95},
+    {name: 'GeForce RTX 4060', image: 'public/ProductLogos/nvidia.jpg', category: categories[0], price: 5.95},
     {name: 'GeForce RTX 3090', image: '/productlogos/nvidia.png', category: categories[0], price: 5.95},
     {name: 'GeForce RTX 3080 Ti', image: '/productlogos/nvidia.png', category: categories[0], price: 6.95},
     {name: 'GeForce RTX 3080', image: '/productlogos/nvidia.png', category: categories[0], price: 6.95},
