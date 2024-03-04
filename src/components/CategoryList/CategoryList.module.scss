@@ -1,25 +1,35 @@
-/*.CategoryList {
+.CategoryList {
     color: var(--text-light);
     list-style: none;
     padding: 0;
     font-size: 1.7vw;
-    }
-    
-    .CategoryList li {
+    display: flex; /* Set display to flex */
+    flex-direction: column; /* Set flex direction to column */
+}
+
+.CategoryList li {
     padding: .6vmin;
     text-align: center;
     border-radius: .5vmin;
     margin-bottom: .5vmin;
-    }
-    
-    .CategoryList li:hover:not(.active) {
+    width: 200px; /* Set a fixed width for all list items */
+    height: 40px; /* Set a fixed height for all list items */
+    transform: translateX(calc((100% - 200px) / 2)); /* Apply staggered translation */
+}
+
+.CategoryList li:nth-child(odd) {
+    transform: translateX(calc(((100% - 200px) / 2) * -1)); /* Reverse staggered translation for odd items */
+}
+
+.CategoryList li:hover:not(.active) {
     cursor: pointer;
     background-color: var(--orange);
     color: var(--white);
-    }
-    
-    .CategoryList li.active {
+}
+
+.CategoryList li.active {
     color: var(--text-dark);
     background-color: var(--tan-1);
     border: .1vmin solid var(--tan-3);
-    }*/
+    padding: .6vmin; /* Maintain the same padding as other list items */
+}

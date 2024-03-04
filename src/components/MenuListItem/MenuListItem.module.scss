@@ -1,27 +1,26 @@
-/*.MenuListItem {
-  width: 100%;
+.MenuListItem {
+  width: 76.8vh; /* Fixed width */
+  height: 10vh; /* Fixed height */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 3vmin;
-  padding: 2vmin;
+  margin: 0 auto 30px auto; /* Center horizontally and add fixed margin bottom */
+  padding: 20px; /* Fixed padding */
   color: var(--text-light);
   background-color: var(--white);
- border: .1vmin solid var(--tan-3);
-  border: 5px solid black;
-  border-radius: 1vmin;
-  font-size: 4vmin;
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 20px; /* Fixed border radius */
+  font-size: 1vh; /* Fixed font size */
 }
 
 .MenuListItem .image {
-  
-  height: 8vw;
-  font-size: 3vw;
+  width: 10vh; /* Fixed width */
+  height: 10vh; /* Fixed height */
+  font-size: 60px; /* Fixed font size */
   background-color: var(--tan-1);
-  border: .1vmin solid var(--tan-3);
-  border-radius: 1vmin;
+  border: 2px solid var(--tan-3);
+  border-radius: 20px; /* Fixed border radius */
 }
-
 
 .MenuListItem .buy {
   display: flex;
@@ -29,13 +28,13 @@
 }
 
 .MenuListItem .buy span {
-  font-size: 1.7vw;
+  font-size: 2vh; /* Fixed font size */
   text-align: center;
   color: var(--text-light);
 }
 
 .MenuListItem .name {
-  font-size: 2vw;
+  font-size: 2vh; /* Fixed font size */
   text-align: center;
   color: var(--text-light);
-}*/
+}

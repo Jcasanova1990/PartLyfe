@@ -2,12 +2,12 @@
   --tan-1: #000000;
   --tan-2: #257500; 
   --tan-3: #968c84; 
-  --tan-4: #257500; 
+  --tan-4: #88c93e; 
   --orange: #000000;
-  --text-light: #257500;
+  --text-light: #52a027;
   --text-dark: #968c84;
-  --white: #ffffff;
-  --trans: #ffffff4b;
+  --white: #f8fffc;
+  --trans: #ffffff00;
 }
 
 *, *:before, *:after {
@@ -32,7 +32,7 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 2vmin;
+  padding: 1vmin; /* Adjusted padding */
   height: 100vh;
 }
 
@@ -42,7 +42,6 @@ code {
 }
 
 #root {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center; 
@@ -85,113 +84,119 @@ code {
   align-items: center;
   background-color: var(--tan-1);
   color: var(--text-dark);
-  border: .1vmin solid var(--tan-3);
   border-radius: 1vmin;
-  padding: .6vmin;
+  padding: .3vmin; /* Adjusted padding */
   text-align: center;
-  font-size: 2vmin;
+  font-size: 1.5vmin; /* Adjusted font size */
 }
-
+.MenuList {
+  width: 50%;
+  font-size: 0.5em;
+  // Add any other necessary styles
+}
 img {
   max-width: 100%;
-  margin-bottom: 2vmin;
+  margin-bottom: 1vmin; /* Adjusted margin */
 }
 
 .Logo{
-  width: 50%;
+  width: 40%; /* Adjusted width */
 }
 
 .form-container {
-  padding: 3vmin;
+  padding: 1.5vmin; /* Adjusted padding */
   background-color: var(--trans);
-  border: .1vmin solid var(--tan-3);
   border-radius: 1vmin;
 }
 
 p.error-message {
   color: var(--orange);
   text-align: center;
+  font-size: 1.5vmin; /* Adjusted font size */
 }
 
 form {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  gap: 1.25vmin;
+  gap: 0.625vmin; /* Adjusted gap */
   color: var(--text-light);
 }
 
 label {
-  font-size: 2vmin;
+  font-size: 1.5vmin; /* Adjusted font size */
   display: flex;
   align-items: center;
 }
 
 input {
-  padding: 1vmin;
-  font-size: 2vmin;
-  border: .1vmin solid var(--tan-3);
-  border-radius: .5vmin;
+  padding: 0.5vmin; /* Adjusted padding */
+  font-size: 1.5vmin; /* Adjusted font size */
   color: var(--text-dark);
   background-image: none !important;
   outline: none;
 }
 
 input:focus {
-  border-color: var(--orange);
+  border-color: var(--orange); /* You can remove this line if you don't want any focus border */
 }
 
 button,
 a.button {
   margin: 1vmin;
-  padding: 1vmin;
+  padding: 2vmin; /* Kept padding for buttons unchanged */
   color: var(--white);
   background-color: var(--orange);
-  font-size: 2vmin;
+  font-size: 2vmin; /* Kept font size for buttons unchanged */
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  border: .1vmin solid var(--tan-2);
-  border-radius: 50%; 
+  border-radius: 1vmin; /* Adjusted border-radius for square with curve */
   outline: none;
   cursor: pointer;
 }
 
 button.btn-sm {
   font-size: 1.5vmin;
-  padding: .6vmin .8vmin;
+  padding: 1.2vmin 1.6vmin; /* Adjusted padding */
+  border-radius: 0.8vmin; /* Adjusted border-radius for square with curve */
 }
 
 button.btn-xs {
   font-size: 1vmin;
-  padding: .4vmin .5vmin;
+  padding: 0.8vmin 1vmin; /* Adjusted padding */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Hexagon shape */
 }
+
 
 button:disabled,
 form:invalid button[type="submit"] {
   cursor: not-allowed;
   background-color: var(--tan-4);
+  border-radius: 1vmin; /* Adjusted border-radius for square with curve */
 }
 
 button[type="submit"] {
   grid-column: span 2;
   margin: 1vmin 0 0;
+  border-radius: 1vmin; /* Adjusted border-radius for square with curve */
 }
 
 button:hover,
 a.button:hover {
-  transform: translateY(-0.2vmin);
-  box-shadow: 0 0.5vmin 1vmin rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.1vmin); /* Adjusted translateY */
+  box-shadow: 0 0.25vmin 0.5vmin rgba(6, 211, 16, 0.842); /* Adjusted box-shadow */
   color: var(--orange);
   background-color: var(--tan-4);
   animation: greenGlow 1s infinite;
+  border-radius: 1vmin; /* Adjusted border-radius for square with curve */
 }
 
 
 @keyframes greenGlow {
   0% {
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    box-shadow: 0 0 5px rgb(0, 255, 0); /* Adjusted box-shadow */
   }
   100% {
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    box-shadow: 0 0 5px rgb(0, 255, 0); /* Adjusted box-shadow */
   }
 }

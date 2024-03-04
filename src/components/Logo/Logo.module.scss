@@ -1,18 +1,16 @@
-/*.Logo {
-    height: 12vmin;
-    width: 12vmin;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: var(--orange);
-    color: var(--tan-2);
-    font-size: 2.7vmin;
-    border: .6vmin solid var(--tan-2);
+.Logo {
+    width: 24vmin; /* 12vmin * 3 = 36vmin */
+    height: 24vmin; /* Adjust the height to maintain aspect ratio */
+    position: relative;
+    overflow: hidden; /* Ensure the border doesn't overflow */
+    border: 0.6vmin solid transparent; /* Set border width and color */
+    border-top-color: var(--orange); /* Set the color of the top border to match the logo's background */
+    border-bottom-color: var(--orange); /* Set the color of the bottom border to match the logo's background */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    /* Define a hexagon shape using clip-path */
 }
 
 .Logo img {
-    max-width: 100%;
-    max-height: 100%;
-}*/
+    width: 100%; /* Set the width to fill the container */
+    height: 100%; /* Maintain the aspect ratio */
+}
