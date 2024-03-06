@@ -1,15 +1,47 @@
 .AuthPage {
-    height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: var(--trans);
-   border-radius: solid black 2px;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--trans);
+  border-radius: 2px;
+ 
+}
+
+.AuthPage h3 {
+  margin-top: 4vmin;
+  text-align: center;
+  color: var(--text-light2);
+  cursor: pointer;
+  background-color: black;
+  border-radius: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 50px;
+  margin-left: 230%; /* Adjust this value as needed */
+  margin-bottom: -25%;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  border-bottom: 2px solid black; /* Corrected border syntax */
+  border-right: 2px solid black; /* Corrected border syntax */
+}
+
+.AuthPage h3:hover {
+  color: black;
+  background-color: #88c93e;
+}
+.AuthPage h3:hover {
+  animation: green-glow 1s infinite alternate;
+}
+
+/* Green glow keyframes */
+@keyframes green-glow {
+  0% {
+    box-shadow: 0 0 10px rgb(0, 255, 0);
   }
-  
-  .AuthPage h3 {
-    margin-top: 4vmin;
-    text-align: center;
-    color: var(--text-light);
-    cursor: pointer;
+  100% {
+    box-shadow: 0 0 10px rgb(0, 255, 0);
   }
+}

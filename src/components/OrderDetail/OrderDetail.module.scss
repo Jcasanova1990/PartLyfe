@@ -8,7 +8,8 @@
   }
   
   .OrderDetail .sectionHeading {
-    width: 100%
+    width: 100%;
+    
   }
   
   .OrderDetail .lineItemContainer {
@@ -31,8 +32,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5vw;
+    font-size: 1vw;
     color: var(--text-dark);
+    
   }
   
   .OrderDetail .total span.right {
@@ -45,3 +47,5 @@
     top: 50vh;
     font-size: 2vmin;
   }
+
+  

@@ -22,15 +22,14 @@ function CategoryList(_ref) {
   } = _ref;
   const cats = categories.map(cat => /*#__PURE__*/React.createElement("li", {
     key: cat,
-    className: cat === activeCat ? _CategoryList_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].active : ''
-    // FYI, the below will also work, but will give a warning
-    // className={cat === activeCat && 'active'}
-    ,
+    className: cat === activeCat ? _CategoryList_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].active : '',
     onClick: () => setActiveCat(cat)
   }, cat));
-  return /*#__PURE__*/React.createElement("ul", {
+  return /*#__PURE__*/React.createElement("div", {
+    className: _CategoryList_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].CategoryContainer
+  }, /*#__PURE__*/React.createElement("ul", {
     className: _CategoryList_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].CategoryList
-  }, cats);
+  }, cats));
 }
 
 /***/ }),
@@ -240,7 +239,7 @@ function MenuListItem(_ref) {
   }, /*#__PURE__*/React.createElement("img", {
     className: _MenuListItem_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].image + ' ' + 'flex-ctr-ctr',
     src: menuItem.image,
-    alt: "Comic Thumbnail"
+    alt: "Part Thumbnail"
   }), /*#__PURE__*/React.createElement("div", {
     className: _MenuListItem_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].name
   }, menuItem.name), /*#__PURE__*/React.createElement("div", {
@@ -248,7 +247,7 @@ function MenuListItem(_ref) {
   }, /*#__PURE__*/React.createElement("span", null, "$", menuItem.price.toFixed(2)), /*#__PURE__*/React.createElement("button", {
     className: "btn-sm",
     onClick: () => handleAddToOrder(menuItem._id)
-  }, "ADD")));
+  }, "ADD TO CART")));
 }
 
 /***/ }),
@@ -286,9 +285,9 @@ function OrderDetail(_ref) {
     className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].OrderDetail
   }, /*#__PURE__*/React.createElement("div", {
     className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].sectionHeading
-  }, order.isPaid ? /*#__PURE__*/React.createElement("span", null, "ORDER ", /*#__PURE__*/React.createElement("span", {
+  }, order.isPaid ? /*#__PURE__*/React.createElement("span", null, "Order ", /*#__PURE__*/React.createElement("span", {
     className: "smaller"
-  }, order.orderId)) : /*#__PURE__*/React.createElement("span", null, "NEW ORDER"), /*#__PURE__*/React.createElement("span", null, new Date(order.updatedAt).toLocaleDateString())), /*#__PURE__*/React.createElement("div", {
+  }, order.orderId)) : /*#__PURE__*/React.createElement("span", null, "New Order - "), /*#__PURE__*/React.createElement("span", null, new Date(order.updatedAt).toLocaleDateString())), /*#__PURE__*/React.createElement("div", {
     className: "".concat(_OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].lineItemContainer, " flex-ctr-ctr flex-col scroll-y")
   }, lineItems.length ? /*#__PURE__*/React.createElement(React.Fragment, null, lineItems, /*#__PURE__*/React.createElement("section", {
     className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].total
@@ -302,7 +301,7 @@ function OrderDetail(_ref) {
     className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].right
   }, "$", order.orderTotal.toFixed(2)))) : /*#__PURE__*/React.createElement("div", {
     className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].hungry
-  }, "Hungry?")));
+  }, "Empty")));
 }
 
 /***/ }),
@@ -1040,21 +1039,24 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.l8hJyaPvo9smd6LiNqWK {
   padding: 0;
   font-size: 1.7vw;
   display: flex; /* Set display to flex */
-  flex-direction: column; /* Set flex direction to column */
+  flex-direction: row; /* Set flex direction to row */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  position: fixed; /* Position the list fixed to stay at the top */
+  top: -0.9vh; /* Position the list at the very top of the page */
+  left: 20.4%; /* Position the list at the very left of the page */
+  width: 42.4%; /* Make the list take the full width of the page */
+  border: 2px solid rgb(0, 0, 0); /* Add green solid border */
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0); /* Fill the inside of the border */
 }
 
 .l8hJyaPvo9smd6LiNqWK li {
   padding: 0.6vmin;
   text-align: center;
   border-radius: 0.5vmin;
-  margin-bottom: 0.5vmin;
-  width: 200px; /* Set a fixed width for all list items */
-  height: 40px; /* Set a fixed height for all list items */
-  transform: translateX(calc((100% - 200px) / 2)); /* Apply staggered translation */
-}
-
-.l8hJyaPvo9smd6LiNqWK li:nth-child(odd) {
-  transform: translateX(calc((100% - 200px) / 2 * -1)); /* Reverse staggered translation for odd items */
+  margin-right: 0.5vmin; /* Add margin-right to create spacing between items */
+  height: 60px; /* Set a fixed height for all list items */
 }
 
 .l8hJyaPvo9smd6LiNqWK li:hover:not(._scckhAN2KPE1u73kR14) {
@@ -1068,7 +1070,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.l8hJyaPvo9smd6LiNqWK {
   background-color: var(--tan-1);
   border: 0.1vmin solid var(--tan-3);
   padding: 0.6vmin; /* Maintain the same padding as other list items */
-}`, "",{"version":3,"sources":["webpack://./src/components/CategoryList/CategoryList.module.scss"],"names":[],"mappings":"AAAA;EACI,wBAAA;EACA,gBAAA;EACA,UAAA;EACA,gBAAA;EACA,aAAA,EAAA,wBAAA;EACA,sBAAA,EAAA,iCAAA;AACJ;;AAEA;EACI,gBAAA;EACA,kBAAA;EACA,sBAAA;EACA,sBAAA;EACA,YAAA,EAAA,yCAAA;EACA,YAAA,EAAA,0CAAA;EACA,+CAAA,EAAA,gCAAA;AACJ;;AAEA;EACI,oDAAA,EAAA,gDAAA;AACJ;;AAEA;EACI,eAAA;EACA,+BAAA;EACA,mBAAA;AACJ;;AAEA;EACI,uBAAA;EACA,8BAAA;EACA,kCAAA;EACA,gBAAA,EAAA,kDAAA;AACJ","sourcesContent":[".CategoryList {\n    color: var(--text-light);\n    list-style: none;\n    padding: 0;\n    font-size: 1.7vw;\n    display: flex; /* Set display to flex */\n    flex-direction: column; /* Set flex direction to column */\n}\n\n.CategoryList li {\n    padding: .6vmin;\n    text-align: center;\n    border-radius: .5vmin;\n    margin-bottom: .5vmin;\n    width: 200px; /* Set a fixed width for all list items */\n    height: 40px; /* Set a fixed height for all list items */\n    transform: translateX(calc((100% - 200px) / 2)); /* Apply staggered translation */\n}\n\n.CategoryList li:nth-child(odd) {\n    transform: translateX(calc(((100% - 200px) / 2) * -1)); /* Reverse staggered translation for odd items */\n}\n\n.CategoryList li:hover:not(.active) {\n    cursor: pointer;\n    background-color: var(--orange);\n    color: var(--white);\n}\n\n.CategoryList li.active {\n    color: var(--text-dark);\n    background-color: var(--tan-1);\n    border: .1vmin solid var(--tan-3);\n    padding: .6vmin; /* Maintain the same padding as other list items */\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/CategoryList/CategoryList.module.scss"],"names":[],"mappings":"AAAA;EACI,wBAAA;EACA,gBAAA;EACA,UAAA;EACA,gBAAA;EACA,aAAA,EAAA,wBAAA;EACA,mBAAA,EAAA,8BAAA;EACA,uBAAA,EAAA,8BAAA;EACA,mBAAA,EAAA,4BAAA;EACA,eAAA,EAAA,+CAAA;EACA,WAAA,EAAA,kDAAA;EACA,WAAA,EAAA,mDAAA;EACA,YAAA,EAAA,kDAAA;EACA,8BAAA,EAAA,2BAAA;EACA,mBAAA;EACA,8BAAA,EAAA,kCAAA;AACJ;;AAEA;EACI,gBAAA;EACA,kBAAA;EACA,sBAAA;EACA,qBAAA,EAAA,qDAAA;EACA,YAAA,EAAA,0CAAA;AACJ;;AAEA;EACI,eAAA;EACA,+BAAA;EACA,mBAAA;AACJ;;AAEA;EACI,uBAAA;EACA,8BAAA;EACA,kCAAA;EACA,gBAAA,EAAA,kDAAA;AACJ","sourcesContent":[".CategoryList {\n    color: var(--text-light);\n    list-style: none;\n    padding: 0;\n    font-size: 1.7vw;\n    display: flex; /* Set display to flex */\n    flex-direction: row; /* Set flex direction to row */\n    justify-content: center; /* Center items horizontally */\n    align-items: center; /* Center items vertically */\n    position: fixed; /* Position the list fixed to stay at the top */\n    top: -0.9vh; /* Position the list at the very top of the page */\n    left: 20.4%; /* Position the list at the very left of the page */\n    width: 42.4%; /* Make the list take the full width of the page */\n    border: 2px solid rgb(0, 0, 0); /* Add green solid border */\n    border-radius: 10px;\n    background-color: rgb(0, 0, 0); /* Fill the inside of the border */\n}\n\n.CategoryList li {\n    padding: .6vmin;\n    text-align: center;\n    border-radius: .5vmin;\n    margin-right: .5vmin; /* Add margin-right to create spacing between items */\n    height: 60px; /* Set a fixed height for all list items */\n}\n\n.CategoryList li:hover:not(.active) {\n    cursor: pointer;\n    background-color: var(--orange);\n    color: var(--white);\n}\n\n.CategoryList li.active {\n    color: var(--text-dark);\n    background-color: var(--tan-1);\n    border: .1vmin solid var(--tan-3);\n    padding: .6vmin; /* Maintain the same padding as other list items */\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"CategoryList": `l8hJyaPvo9smd6LiNqWK`,
@@ -1128,7 +1130,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.ZeRW57PNaWpYVsw6JlaC {
 
 .ZeRW57PNaWpYVsw6JlaC button {
   margin: 0;
-}`, "",{"version":3,"sources":["webpack://./src/components/LineItem/LineItem.module.scss"],"names":[],"mappings":"AAAA;EACI,WAAA;EACA,aAAA;EACA,gDAAA;EACA,gBAAA;EACA,wBAAA;EACA,8BAAA;EACA,sCAAA;EACA,cAAA;AACJ;;AAEI;EACA,yCAAA;AACJ;;AAEI;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,gBAAA;AACJ;;AAEI;EACA,aAAA;EACA,yBAAA;EACA,mBAAA;EACA,cAAA;AACJ;;AAEI;EACA,SAAA;AACJ","sourcesContent":[".LineItem {\n    width: 100%;\n    display: grid;\n    grid-template-columns: 3vw 15.35vw 5.75vw 5.25vw;\n    padding: 1vmin 0;\n    color: var(--text-light);\n    background-color: var(--white);\n    border-top: .1vmin solid var(--tan-3);\n    font-size: 1vw;\n    }\n    \n    .LineItem:last-child {\n    border-bottom: .1vmin solid var(--tan-3);\n    }\n    \n    .LineItem .qty {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    font-size: 1.3vw;\n    }\n    \n    .LineItem .extPrice {\n    display: flex;\n    justify-content: flex-end;\n    align-items: center;\n    font-size: 1vw;\n    }\n    \n    .LineItem button {\n    margin: 0;\n    }"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/LineItem/LineItem.module.scss"],"names":[],"mappings":"AAAA;EACI,WAAA;EACA,aAAA;EACA,gDAAA;EACA,gBAAA;EACA,wBAAA;EACA,8BAAA;EACA,sCAAA;EACA,cAAA;AACJ;;AAEI;EACA,yCAAA;AACJ;;AAEI;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,gBAAA;AACJ;;AAEI;EACA,aAAA;EACA,yBAAA;EACA,mBAAA;EACA,cAAA;AACJ;;AAEI;EACA,SAAA;AACJ","sourcesContent":[".LineItem {\n    width: 100%;\n    display: grid;\n    grid-template-columns: 3vw 15.35vw 5.75vw 5.25vw;\n    padding: 1vmin 0;\n    color: var(--text-light);\n    background-color: var(--white);\n    border-top: .1vmin solid var(--tan-3);\n    font-size: 1vw;\n    }\n    \n    .LineItem:last-child {\n    border-bottom: .1vmin solid var(--tan-3);\n    }\n    \n    .LineItem .qty {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    font-size: 1.3vw;\n    }\n    \n    .LineItem .extPrice {\n    display: flex;\n    justify-content: flex-end;\n    align-items: center;\n    font-size: 1vw;\n    }\n    \n    .LineItem button {\n    margin: 0;\n    }\n\n   "],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"LineItem": `ZeRW57PNaWpYVsw6JlaC`,
@@ -1204,13 +1206,27 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `.eBz5FvD9TgyIgfFi1MdG {
   background-color: var(--tan-1);
-  border: 0.1vmin solid var(--tan-3);
   border-radius: 2vmin;
-  margin: 3vmin 0;
+  margin: 6vmin 0; /* Increase the top margin to move it down */
   padding: 3vmin;
   overflow-y: scroll;
-  height: 97%;
-}`, "",{"version":3,"sources":["webpack://./src/components/MenuList/MenuList.module.scss"],"names":[],"mappings":"AAEA;EACI,8BAAA;EACA,kCAAA;EACA,oBAAA;EACA,eAAA;EACA,cAAA;EACA,kBAAA;EACA,WAAA;AADJ","sourcesContent":["\n\n.MenuList {\n    background-color: var(--tan-1);\n    border: 0.1vmin solid var(--tan-3);\n    border-radius: 2vmin;\n    margin: 3vmin 0;\n    padding: 3vmin;\n    overflow-y: scroll;\n    height: 97%;\n  \n  }\n  "],"sourceRoot":""}]);
+  height: 83%;
+}
+
+.eBz5FvD9TgyIgfFi1MdG::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+  border-radius: 90px;
+}
+
+.eBz5FvD9TgyIgfFi1MdG::-webkit-scrollbar-track {
+  background: var(--orange); /* Color of the track */
+  border-radius: 90px;
+}
+
+.eBz5FvD9TgyIgfFi1MdG::-webkit-scrollbar-thumb {
+  background: var(--tan-4); /* Color of the thumb */
+  border-radius: 9px; /* Rounded corners of the thumb */
+}`, "",{"version":3,"sources":["webpack://./src/components/MenuList/MenuList.module.scss"],"names":[],"mappings":"AAAA;EACE,8BAAA;EACA,oBAAA;EACA,eAAA,EAAA,4CAAA;EACA,cAAA;EACA,kBAAA;EACA,WAAA;AACF;;AAEA;EACE,UAAA,EAAA,2BAAA;EACA,mBAAA;AACF;;AAEA;EACE,yBAAA,EAAA,uBAAA;EACA,mBAAA;AACF;;AAEA;EACE,wBAAA,EAAA,uBAAA;EACA,kBAAA,EAAA,iCAAA;AACF","sourcesContent":[".MenuList {\n  background-color: var(--tan-1);\n  border-radius: 2vmin;\n  margin: 6vmin 0; /* Increase the top margin to move it down */\n  padding: 3vmin;\n  overflow-y: scroll;\n  height: 83%;\n}\n\n.MenuList::-webkit-scrollbar {\n  width: 5px; /* Width of the scrollbar */\n  border-radius: 90px\n}\n\n.MenuList::-webkit-scrollbar-track {\n  background: var(--orange); /* Color of the track */\n  border-radius: 90px\n}\n\n.MenuList::-webkit-scrollbar-thumb {\n  background: var(--tan-4); /* Color of the thumb */\n  border-radius: 9px; /* Rounded corners of the thumb */\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"MenuList": `eBz5FvD9TgyIgfFi1MdG`
@@ -1251,6 +1267,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.X4tFBfG4MKknHvd01CKE {
   border: 2px solid rgba(0, 0, 0, 0);
   border-radius: 20px; /* Fixed border radius */
   font-size: 1vh; /* Fixed font size */
+  cursor: pointer; /* Added cursor pointer */
+  transition: box-shadow 0.3s ease; /* Added transition for box-shadow */
 }
 
 .X4tFBfG4MKknHvd01CKE .dTwdG1Vxh_kNAcuyMLbz {
@@ -1277,13 +1295,27 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.X4tFBfG4MKknHvd01CKE {
   font-size: 2vh; /* Fixed font size */
   text-align: center;
   color: var(--text-light);
-}`, "",{"version":3,"sources":["webpack://./src/components/MenuListItem/MenuListItem.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA,EAAA,gBAAA;EACA,YAAA,EAAA,iBAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,wBAAA,EAAA,oDAAA;EACA,aAAA,EAAA,kBAAA;EACA,wBAAA;EACA,8BAAA;EACA,kCAAA;EACA,mBAAA,EAAA,wBAAA;EACA,cAAA,EAAA,oBAAA;AACF;;AAEA;EACE,WAAA,EAAA,gBAAA;EACA,YAAA,EAAA,iBAAA;EACA,eAAA,EAAA,oBAAA;EACA,8BAAA;EACA,8BAAA;EACA,mBAAA,EAAA,wBAAA;AACF;;AAEA;EACE,aAAA;EACA,sBAAA;AACF;;AAEA;EACE,cAAA,EAAA,oBAAA;EACA,kBAAA;EACA,wBAAA;AACF;;AAEA;EACE,cAAA,EAAA,oBAAA;EACA,kBAAA;EACA,wBAAA;AACF","sourcesContent":[".MenuListItem {\n  width: 76.8vh; /* Fixed width */\n  height: 10vh; /* Fixed height */\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin: 0 auto 30px auto; /* Center horizontally and add fixed margin bottom */\n  padding: 20px; /* Fixed padding */\n  color: var(--text-light);\n  background-color: var(--white);\n  border: 2px solid rgba(0, 0, 0, 0);\n  border-radius: 20px; /* Fixed border radius */\n  font-size: 1vh; /* Fixed font size */\n}\n\n.MenuListItem .image {\n  width: 10vh; /* Fixed width */\n  height: 10vh; /* Fixed height */\n  font-size: 60px; /* Fixed font size */\n  background-color: var(--tan-1);\n  border: 2px solid var(--tan-3);\n  border-radius: 20px; /* Fixed border radius */\n}\n\n.MenuListItem .buy {\n  display: flex;\n  flex-direction: column;\n}\n\n.MenuListItem .buy span {\n  font-size: 2vh; /* Fixed font size */\n  text-align: center;\n  color: var(--text-light);\n}\n\n.MenuListItem .name {\n  font-size: 2vh; /* Fixed font size */\n  text-align: center;\n  color: var(--text-light);\n}\n"],"sourceRoot":""}]);
+}
+
+.X4tFBfG4MKknHvd01CKE:hover {
+  box-shadow: 0 0 10px rgb(0, 255, 0); /* Added glow effect on hover */
+}
+
+@keyframes CqxdCQ8Sdh3r4c_1asuP {
+  0% {
+    box-shadow: 0 0 5px rgb(0, 255, 0); /* Adjusted box-shadow */
+  }
+  100% {
+    box-shadow: 0 0 5px rgb(0, 255, 0); /* Adjusted box-shadow */
+  }
+}`, "",{"version":3,"sources":["webpack://./src/components/MenuListItem/MenuListItem.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA,EAAA,gBAAA;EACA,YAAA,EAAA,iBAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,wBAAA,EAAA,oDAAA;EACA,aAAA,EAAA,kBAAA;EACA,wBAAA;EACA,8BAAA;EACA,kCAAA;EACA,mBAAA,EAAA,wBAAA;EACA,cAAA,EAAA,oBAAA;EACA,eAAA,EAAA,yBAAA;EACA,gCAAA,EAAA,oCAAA;AACF;;AAEA;EACE,WAAA,EAAA,gBAAA;EACA,YAAA,EAAA,iBAAA;EACA,eAAA,EAAA,oBAAA;EACA,8BAAA;EACA,8BAAA;EACA,mBAAA,EAAA,wBAAA;AACF;;AAEA;EACE,aAAA;EACA,sBAAA;AACF;;AAEA;EACE,cAAA,EAAA,oBAAA;EACA,kBAAA;EACA,wBAAA;AACF;;AAEA;EACE,cAAA,EAAA,oBAAA;EACA,kBAAA;EACA,wBAAA;AACF;;AAEA;EACE,mCAAA,EAAA,+BAAA;AACF;;AAEA;EACE;IACE,kCAAA,EAAA,wBAAA;EACF;EACA;IACE,kCAAA,EAAA,wBAAA;EACF;AACF","sourcesContent":[".MenuListItem {\n  width: 76.8vh; /* Fixed width */\n  height: 10vh; /* Fixed height */\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin: 0 auto 30px auto; /* Center horizontally and add fixed margin bottom */\n  padding: 20px; /* Fixed padding */\n  color: var(--text-light);\n  background-color: var(--white);\n  border: 2px solid rgba(0, 0, 0, 0);\n  border-radius: 20px; /* Fixed border radius */\n  font-size: 1vh; /* Fixed font size */\n  cursor: pointer; /* Added cursor pointer */\n  transition: box-shadow 0.3s ease; /* Added transition for box-shadow */\n}\n\n.MenuListItem .image {\n  width: 10vh; /* Fixed width */\n  height: 10vh; /* Fixed height */\n  font-size: 60px; /* Fixed font size */\n  background-color: var(--tan-1);\n  border: 2px solid var(--tan-3);\n  border-radius: 20px; /* Fixed border radius */\n}\n\n.MenuListItem .buy {\n  display: flex;\n  flex-direction: column;\n}\n\n.MenuListItem .buy span {\n  font-size: 2vh; /* Fixed font size */\n  text-align: center;\n  color: var(--text-light);\n}\n\n.MenuListItem .name {\n  font-size: 2vh; /* Fixed font size */\n  text-align: center;\n  color: var(--text-light);\n}\n\n.MenuListItem:hover {\n  box-shadow: 0 0 10px rgb(0, 255, 0); /* Added glow effect on hover */\n}\n\n@keyframes greenGlow {\n  0% {\n    box-shadow: 0 0 5px rgb(0, 255, 0); /* Adjusted box-shadow */\n  }\n  100% {\n    box-shadow: 0 0 5px rgb(0, 255, 0); /* Adjusted box-shadow */\n  }\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"MenuListItem": `X4tFBfG4MKknHvd01CKE`,
 	"image": `dTwdG1Vxh_kNAcuyMLbz`,
 	"buy": `fO9kiPygtr0vmzsXoUxA`,
-	"name": `VR1OCl60qOXrRx1IzVEa`
+	"name": `VR1OCl60qOXrRx1IzVEa`,
+	"greenGlow": `CqxdCQ8Sdh3r4c_1asuP`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1341,7 +1373,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.cPR75kdAXDGVxib0PszB {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5vw;
+  font-size: 1vw;
   color: var(--text-dark);
 }
 
@@ -1354,7 +1386,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.cPR75kdAXDGVxib0PszB {
   position: absolute;
   top: 50vh;
   font-size: 2vmin;
-}`, "",{"version":3,"sources":["webpack://./src/components/OrderDetail/OrderDetail.module.scss"],"names":[],"mappings":"AAAA;EACI,sBAAA;EACA,2BAAA;EACA,mBAAA;EACA,cAAA;EACA,gBAAA;EACA,wBAAA;AACJ;;AAEE;EACE,WAAA;AACJ;;AAEE;EACE,iBAAA;EACA,2BAAA;EACA,4BAAA;EACA,WAAA;AACJ;;AAEE;EACE,WAAA;EACA,aAAA;EACA,4CAAA;EACA,gBAAA;EACA,wBAAA;EACA,sCAAA;AACJ;;AAEE;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,gBAAA;EACA,uBAAA;AACJ;;AAEE;EACE,aAAA;EACA,yBAAA;AACJ;;AAEE;EACE,kBAAA;EACA,SAAA;EACA,gBAAA;AACJ","sourcesContent":[".OrderDetail {\n    flex-direction: column;\n    justify-content: flex-start;\n    align-items: center;\n    padding: 3vmin;\n    font-size: 2vmin;\n    color: var(--text-light);\n  }\n  \n  .OrderDetail .sectionHeading {\n    width: 100%\n  }\n  \n  .OrderDetail .lineItemContainer {\n    margin-top: 3vmin;\n    justify-content: flex-start;\n    height: calc(100vh - 18vmin);\n    width: 100%;\n  }\n  \n  .OrderDetail .total {\n    width: 100%;\n    display: grid;\n    grid-template-columns: 18.35vw 5.75vw 5.25vw;\n    padding: 1vmin 0;\n    color: var(--text-light);\n    border-top: .1vmin solid var(--tan-3);\n  }\n  \n  .OrderDetail .total span {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    font-size: 1.5vw;\n    color: var(--text-dark);\n  }\n  \n  .OrderDetail .total span.right {\n    display: flex;\n    justify-content: flex-end;\n  }\n  \n  .OrderDetail .hungry {\n    position: absolute;\n    top: 50vh;\n    font-size: 2vmin;\n  }"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/OrderDetail/OrderDetail.module.scss"],"names":[],"mappings":"AAAA;EACI,sBAAA;EACA,2BAAA;EACA,mBAAA;EACA,cAAA;EACA,gBAAA;EACA,wBAAA;AACJ;;AAEE;EACE,WAAA;AACJ;;AAGE;EACE,iBAAA;EACA,2BAAA;EACA,4BAAA;EACA,WAAA;AAAJ;;AAGE;EACE,WAAA;EACA,aAAA;EACA,4CAAA;EACA,gBAAA;EACA,wBAAA;EACA,sCAAA;AAAJ;;AAGE;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,cAAA;EACA,uBAAA;AAAJ;;AAIE;EACE,aAAA;EACA,yBAAA;AADJ;;AAIE;EACE,kBAAA;EACA,SAAA;EACA,gBAAA;AADJ","sourcesContent":[".OrderDetail {\n    flex-direction: column;\n    justify-content: flex-start;\n    align-items: center;\n    padding: 3vmin;\n    font-size: 2vmin;\n    color: var(--text-light);\n  }\n  \n  .OrderDetail .sectionHeading {\n    width: 100%;\n    \n  }\n  \n  .OrderDetail .lineItemContainer {\n    margin-top: 3vmin;\n    justify-content: flex-start;\n    height: calc(100vh - 18vmin);\n    width: 100%;\n  }\n  \n  .OrderDetail .total {\n    width: 100%;\n    display: grid;\n    grid-template-columns: 18.35vw 5.75vw 5.25vw;\n    padding: 1vmin 0;\n    color: var(--text-light);\n    border-top: .1vmin solid var(--tan-3);\n  }\n  \n  .OrderDetail .total span {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    font-size: 1vw;\n    color: var(--text-dark);\n    \n  }\n  \n  .OrderDetail .total span.right {\n    display: flex;\n    justify-content: flex-end;\n  }\n  \n  .OrderDetail .hungry {\n    position: absolute;\n    top: 50vh;\n    font-size: 2vmin;\n  }\n\n  "],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"OrderDetail": `cPR75kdAXDGVxib0PszB`,
@@ -1396,6 +1428,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.l6Ner7C7O5I4V69HVVgW {
   border-radius: 2vmin;
   margin: 3vmin 0;
   padding: 3vmin;
+  height: 80%;
   overflow-y: scroll;
 }
 
@@ -1404,7 +1437,22 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.l6Ner7C7O5I4V69HVVgW {
   font-size: 5vmin;
   position: absolute;
   top: 50vh;
-}`, "",{"version":3,"sources":["webpack://./src/components/OrderList/OrderList.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,8BAAA;EACA,kCAAA;EACA,oBAAA;EACA,eAAA;EACA,cAAA;EACA,kBAAA;AACJ;;AAEI;EACA,wBAAA;EACA,gBAAA;EACA,kBAAA;EACA,SAAA;AACJ","sourcesContent":[".OrderList {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    background-color: var(--tan-1);\n    border: .1vmin solid var(--tan-3);\n    border-radius: 2vmin;\n    margin: 3vmin 0;\n    padding: 3vmin;\n    overflow-y: scroll;\n    }\n    \n    .OrderList .noOrders {\n    color: var(--text-light);\n    font-size: 5vmin;\n    position: absolute;\n    top: calc(50vh);\n    }"],"sourceRoot":""}]);
+}
+
+.l6Ner7C7O5I4V69HVVgW::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+  border-radius: 90px;
+}
+
+.l6Ner7C7O5I4V69HVVgW::-webkit-scrollbar-track {
+  background: var(--orange); /* Color of the track */
+  border-radius: 90px;
+}
+
+.l6Ner7C7O5I4V69HVVgW::-webkit-scrollbar-thumb {
+  background: var(--tan-4); /* Color of the thumb */
+  border-radius: 9px; /* Rounded corners of the thumb */
+}`, "",{"version":3,"sources":["webpack://./src/components/OrderList/OrderList.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,8BAAA;EACA,kCAAA;EACA,oBAAA;EACA,eAAA;EACA,cAAA;EACA,WAAA;EACA,kBAAA;AACJ;;AAEI;EACA,wBAAA;EACA,gBAAA;EACA,kBAAA;EACA,SAAA;AACJ;;AAEI;EACI,UAAA,EAAA,2BAAA;EACA,mBAAA;AACR;;AAEM;EACE,yBAAA,EAAA,uBAAA;EACA,mBAAA;AACR;;AAEM;EACE,wBAAA,EAAA,uBAAA;EACA,kBAAA,EAAA,iCAAA;AACR","sourcesContent":[".OrderList {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    background-color: var(--tan-1);\n    border: .1vmin solid var(--tan-3);\n    border-radius: 2vmin;\n    margin: 3vmin 0;\n    padding: 3vmin;\n    height: 80%;\n    overflow-y: scroll;\n    }\n    \n    .OrderList .noOrders {\n    color: var(--text-light);\n    font-size: 5vmin;\n    position: absolute;\n    top: calc(50vh);\n    }\n\n    .OrderList::-webkit-scrollbar {\n        width: 5px; /* Width of the scrollbar */\n        border-radius: 90px\n      }\n      \n      .OrderList::-webkit-scrollbar-track {\n        background: var(--orange); /* Color of the track */\n        border-radius: 90px\n      }\n      \n      .OrderList::-webkit-scrollbar-thumb {\n        background: var(--tan-4); /* Color of the thumb */\n        border-radius: 9px; /* Rounded corners of the thumb */\n      }\n      "],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"OrderList": `l6Ner7C7O5I4V69HVVgW`,
@@ -1446,6 +1494,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.SbDKL2bctOyC5ZgA0KfW {
   border-radius: 1vmin;
   font-size: 2vmin;
   cursor: pointer;
+  transition: box-shadow 0.3s ease; /* Added transition for box-shadow */
 }
 
 .SbDKL2bctOyC5ZgA0KfW > div > div:first-child {
@@ -1461,11 +1510,22 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.SbDKL2bctOyC5ZgA0KfW {
 .SbDKL2bctOyC5ZgA0KfW:not(.mOA_Z5p05rn7VW_2oU68):hover {
   border-color: var(--orange);
   border-width: 0.2vmin;
-}`, "",{"version":3,"sources":["webpack://./src/components/OrderListItem/OrderListItem.module.scss"],"names":[],"mappings":"AAAA;EACI,WAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,oBAAA;EACA,cAAA;EACA,wBAAA;EACA,8BAAA;EACA,kCAAA;EACA,oBAAA;EACA,gBAAA;EACA,eAAA;AACJ;;AAEI;EACA,sBAAA;AACJ;;AAEI;EACA,2BAAA;EACA,qBAAA;EACA,eAAA;AACJ;;AAEI;EACA,2BAAA;EACA,qBAAA;AACJ","sourcesContent":[".OrderListItem {\n    width: 100%;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-bottom: 3vmin;\n    padding: 2vmin;\n    color: var(--text-light);\n    background-color: var(--white);\n    border: .2vmin solid var(--tan-3);\n    border-radius: 1vmin;\n    font-size: 2vmin;\n    cursor: pointer;\n    }\n    \n    .OrderListItem > div> div:first-child {\n    margin-bottom: .5vmin;\n    }\n    \n    .OrderListItem.selected {\n    border-color: var(--orange);\n    border-width: .2vmin;\n    cursor: default;\n    }\n    \n    .OrderListItem:not(.selected):hover {\n    border-color: var(--orange);\n    border-width: .2vmin;\n    }\n    "],"sourceRoot":""}]);
+  box-shadow: 0 0 10px rgb(0, 255, 0); /* Added glow effect on hover */
+}
+
+@keyframes oapvCfGBJwaN7Gpb7zRR {
+  0% {
+    box-shadow: 0 0 5px rgb(0, 255, 0); /* Adjusted box-shadow */
+  }
+  100% {
+    box-shadow: 0 0 5px rgb(0, 255, 0); /* Adjusted box-shadow */
+  }
+}`, "",{"version":3,"sources":["webpack://./src/components/OrderListItem/OrderListItem.module.scss"],"names":[],"mappings":"AAAA;EACI,WAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,oBAAA;EACA,cAAA;EACA,wBAAA;EACA,8BAAA;EACA,kCAAA;EACA,oBAAA;EACA,gBAAA;EACA,eAAA;EACA,gCAAA,EAAA,oCAAA;AACJ;;AAEA;EACI,sBAAA;AACJ;;AAEA;EACI,2BAAA;EACA,qBAAA;EACA,eAAA;AACJ;;AAEA;EACI,2BAAA;EACA,qBAAA;EACA,mCAAA,EAAA,+BAAA;AACJ;;AAEA;EACI;IACE,kCAAA,EAAA,wBAAA;EACJ;EACE;IACE,kCAAA,EAAA,wBAAA;EACJ;AACF","sourcesContent":[".OrderListItem {\n    width: 100%;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-bottom: 3vmin;\n    padding: 2vmin;\n    color: var(--text-light);\n    background-color: var(--white);\n    border: .2vmin solid var(--tan-3);\n    border-radius: 1vmin;\n    font-size: 2vmin;\n    cursor: pointer;\n    transition: box-shadow 0.3s ease; /* Added transition for box-shadow */\n}\n\n.OrderListItem > div > div:first-child {\n    margin-bottom: .5vmin;\n}\n\n.OrderListItem.selected {\n    border-color: var(--orange);\n    border-width: .2vmin;\n    cursor: default;\n}\n\n.OrderListItem:not(.selected):hover {\n    border-color: var(--orange);\n    border-width: .2vmin;\n    box-shadow: 0 0 10px rgb(0, 255, 0); /* Added glow effect on hover */\n}\n\n@keyframes greenGlow {\n    0% {\n      box-shadow: 0 0 5px rgb(0, 255, 0); /* Adjusted box-shadow */\n    }\n    100% {\n      box-shadow: 0 0 5px rgb(0, 255, 0); /* Adjusted box-shadow */\n    }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"OrderListItem": `SbDKL2bctOyC5ZgA0KfW`,
-	"selected": `mOA_Z5p05rn7VW_2oU68`
+	"selected": `mOA_Z5p05rn7VW_2oU68`,
+	"greenGlow": `oapvCfGBJwaN7Gpb7zRR`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1533,18 +1593,51 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.RygkJgZmBHTETlLP3C3i {
   justify-content: space-evenly;
   align-items: center;
   background-color: var(--trans);
-  border-radius: solid black 2px;
+  border-radius: 2px;
 }
 
 .RygkJgZmBHTETlLP3C3i h3 {
   margin-top: 4vmin;
   text-align: center;
-  color: var(--text-light);
+  color: var(--text-light2);
   cursor: pointer;
-}`, "",{"version":3,"sources":["webpack://./src/pages/AuthPage/AuthPage.module.scss"],"names":[],"mappings":"AAAA;EACI,YAAA;EACA,aAAA;EACA,6BAAA;EACA,mBAAA;EACA,8BAAA;EACD,8BAAA;AACH;;AAEE;EACE,iBAAA;EACA,kBAAA;EACA,wBAAA;EACA,eAAA;AACJ","sourcesContent":[".AuthPage {\n    height: 100%;\n    display: flex;\n    justify-content: space-evenly;\n    align-items: center;\n    background-color: var(--trans);\n   border-radius: solid black 2px;\n  }\n  \n  .AuthPage h3 {\n    margin-top: 4vmin;\n    text-align: center;\n    color: var(--text-light);\n    cursor: pointer;\n  }"],"sourceRoot":""}]);
+  background-color: black;
+  border-radius: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 50px;
+  margin-left: 230%; /* Adjust this value as needed */
+  margin-bottom: -25%;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  border-bottom: 2px solid black; /* Corrected border syntax */
+  border-right: 2px solid black; /* Corrected border syntax */
+}
+
+.RygkJgZmBHTETlLP3C3i h3:hover {
+  color: black;
+  background-color: #88c93e;
+}
+
+.RygkJgZmBHTETlLP3C3i h3:hover {
+  animation: nifJK8H2iICSKupHmIFF 1s infinite alternate;
+}
+
+/* Green glow keyframes */
+@keyframes nifJK8H2iICSKupHmIFF {
+  0% {
+    box-shadow: 0 0 10px rgb(0, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 10px rgb(0, 255, 0);
+  }
+}`, "",{"version":3,"sources":["webpack://./src/pages/AuthPage/AuthPage.module.scss"],"names":[],"mappings":"AAAA;EACE,YAAA;EACA,aAAA;EACA,6BAAA;EACA,mBAAA;EACA,8BAAA;EACA,kBAAA;AACF;;AAGA;EACE,iBAAA;EACA,kBAAA;EACA,yBAAA;EACA,eAAA;EACA,uBAAA;EACA,mBAAA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,iBAAA;EACA,iBAAA,EAAA,gCAAA;EACA,mBAAA;EACA,WAAA;EACA,sCAAA;EACA,8BAAA,EAAA,4BAAA;EACA,6BAAA,EAAA,4BAAA;AAAF;;AAGA;EACE,YAAA;EACA,yBAAA;AAAF;;AAEA;EACE,qDAAA;AACF;;AAEA,yBAAA;AACA;EACE;IACE,mCAAA;EACF;EACA;IACE,mCAAA;EACF;AACF","sourcesContent":[".AuthPage {\n  height: 100%;\n  display: flex;\n  justify-content: space-evenly;\n  align-items: center;\n  background-color: var(--trans);\n  border-radius: 2px;\n \n}\n\n.AuthPage h3 {\n  margin-top: 4vmin;\n  text-align: center;\n  color: var(--text-light2);\n  cursor: pointer;\n  background-color: black;\n  border-radius: 10px;\n  height: 50px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  line-height: 50px;\n  margin-left: 230%; /* Adjust this value as needed */\n  margin-bottom: -25%;\n  width: 100%;\n  transition: background-color 0.3s ease;\n  border-bottom: 2px solid black; /* Corrected border syntax */\n  border-right: 2px solid black; /* Corrected border syntax */\n}\n\n.AuthPage h3:hover {\n  color: black;\n  background-color: #88c93e;\n}\n.AuthPage h3:hover {\n  animation: green-glow 1s infinite alternate;\n}\n\n/* Green glow keyframes */\n@keyframes green-glow {\n  0% {\n    box-shadow: 0 0 10px rgb(0, 255, 0);\n  }\n  100% {\n    box-shadow: 0 0 10px rgb(0, 255, 0);\n  }\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
-	"AuthPage": `RygkJgZmBHTETlLP3C3i`
+	"AuthPage": `RygkJgZmBHTETlLP3C3i`,
+	"green-glow": `nifJK8H2iICSKupHmIFF`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

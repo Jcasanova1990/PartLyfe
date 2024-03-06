@@ -5,6 +5,7 @@
   --tan-4: #88c93e; 
   --orange: #000000;
   --text-light: #52a027;
+  --text-light2:#ffffff;
   --text-dark: #968c84;
   --white: #f8fffc;
   --trans: #ffffff00;
@@ -65,6 +66,10 @@ code {
   justify-content: center;
   align-items: center;
 }
+.flex-ctr-ctr img {
+  width: 55px;
+  height: auto;
+}
 
 .flex-col {
   flex-direction: column;
@@ -107,6 +112,7 @@ img {
   padding: 1.5vmin; /* Adjusted padding */
   background-color: var(--trans);
   border-radius: 1vmin;
+  width: 500px ;
 }
 
 p.error-message {
@@ -116,13 +122,16 @@ p.error-message {
 }
 
 form {
+  width: 500px;
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 0.625vmin; /* Adjusted gap */
   color: var(--text-light);
+  margin: 0 auto; /* Center horizontally */
 }
 
 label {
+  color: #f8fffc;
   font-size: 1.5vmin; /* Adjusted font size */
   display: flex;
   align-items: center;
@@ -140,8 +149,11 @@ input:focus {
   border-color: var(--orange); /* You can remove this line if you don't want any focus border */
 }
 
+
 button,
-a.button {
+a.button,
+button.btn-sm,
+button.btn-xs {
   margin: 1vmin;
   padding: 2vmin; /* Kept padding for buttons unchanged */
   color: var(--white);
@@ -153,6 +165,7 @@ a.button {
   border-radius: 1vmin; /* Adjusted border-radius for square with curve */
   outline: none;
   cursor: pointer;
+  transition: background-color 0.3s ease; /* Added transition property */
 }
 
 button.btn-sm {
@@ -166,7 +179,6 @@ button.btn-xs {
   padding: 0.8vmin 1vmin; /* Adjusted padding */
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Hexagon shape */
 }
-
 
 button:disabled,
 form:invalid button[type="submit"] {
@@ -182,13 +194,25 @@ button[type="submit"] {
 }
 
 button:hover,
-a.button:hover {
+a.button:hover,
+button.btn-sm:hover,
+button.btn-xs:hover {
   transform: translateY(-0.1vmin); /* Adjusted translateY */
   box-shadow: 0 0.25vmin 0.5vmin rgba(6, 211, 16, 0.842); /* Adjusted box-shadow */
   color: var(--orange);
   background-color: var(--tan-4);
   animation: greenGlow 1s infinite;
   border-radius: 1vmin; /* Adjusted border-radius for square with curve */
+}
+
+/* Green glow keyframes */
+@keyframes greenGlow {
+  0% {
+    box-shadow: 0 0 5px rgb(0, 255, 0); /* Adjusted box-shadow */
+  }
+  100% {
+    box-shadow: 0 0 5px rgb(0, 255, 0); /* Adjusted box-shadow */
+  }
 }
 
 

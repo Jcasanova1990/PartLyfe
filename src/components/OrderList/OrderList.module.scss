@@ -7,6 +7,7 @@
     border-radius: 2vmin;
     margin: 3vmin 0;
     padding: 3vmin;
+    height: 80%;
     overflow-y: scroll;
     }
     
@@ -16,3 +17,19 @@
     position: absolute;
     top: calc(50vh);
     }
+
+    .OrderList::-webkit-scrollbar {
+        width: 5px; /* Width of the scrollbar */
+        border-radius: 90px
+      }
+      
+      .OrderList::-webkit-scrollbar-track {
+        background: var(--orange); /* Color of the track */
+        border-radius: 90px
+      }
+      
+      .OrderList::-webkit-scrollbar-thumb {
+        background: var(--tan-4); /* Color of the thumb */
+        border-radius: 9px; /* Rounded corners of the thumb */
+      }
+      

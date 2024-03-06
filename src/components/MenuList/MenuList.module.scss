@@ -1,13 +1,23 @@
-
-
 .MenuList {
-    background-color: var(--tan-1);
-    border: 0.1vmin solid var(--tan-3);
-    border-radius: 2vmin;
-    margin: 3vmin 0;
-    padding: 3vmin;
-    overflow-y: scroll;
-    height: 97%;
-  
-  }
-  
+  background-color: var(--tan-1);
+  border-radius: 2vmin;
+  margin: 6vmin 0; /* Increase the top margin to move it down */
+  padding: 3vmin;
+  overflow-y: scroll;
+  height: 83%;
+}
+
+.MenuList::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+  border-radius: 90px
+}
+
+.MenuList::-webkit-scrollbar-track {
+  background: var(--orange); /* Color of the track */
+  border-radius: 90px
+}
+
+.MenuList::-webkit-scrollbar-thumb {
+  background: var(--tan-4); /* Color of the thumb */
+  border-radius: 9px; /* Rounded corners of the thumb */
+}
