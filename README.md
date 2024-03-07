@@ -27,16 +27,17 @@ Javascript
 
 # Big Poppa Code React Starter Kit
 
-This Starter Kit is being in this app.
+This Starter Kit is being used in this app.
 Go here to here to learn some cool stuff.
 [Big Poppa Code](https://bigpoppacode.io/)
+[Pkg Kit](https://www.npmjs.com/package/big-poppa-code-react-starter)
 
 # Reference Materials
 
 [React Dev](https://react.dev/)
 [MDN](https://developer.mozilla.org/en-US/)
 [W3Schools](https://www.w3schools.com/sass/default.asp)
-[Big Poppa Code](https://www.youtube.com/@bigpoppacode)
+[Big Poppa Code Channel](https://www.youtube.com/@bigpoppacode)
 [Geeks for Geeks](https://www.geeksforgeeks.org/)
 [Npm Docs](https://docs.npmjs.com/)
 [Npm+runKit](https://npm.runkit.com/?q=)
