@@ -29,7 +29,7 @@ Javascript
 
 This Starter Kit is being used in this app.
 Go here to here to learn some cool stuff.
-[Big Poppa Code](https://bigpoppacode.io/)
+[Big Poppa Code](https://bigpoppacode.io/) ---
 [Pkg Kit](https://www.npmjs.com/package/big-poppa-code-react-starter)
 
 # Reference Materials
