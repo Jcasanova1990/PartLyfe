@@ -1,16 +1,15 @@
 .Logo {
-    width: 24vmin; /* 12vmin * 3 = 36vmin */
-    height: 24vmin; /* Adjust the height to maintain aspect ratio */
+    width: 24vmin;
+    height: 24vmin;
     position: relative;
-    overflow: hidden; /* Ensure the border doesn't overflow */
-    border: 0.6vmin solid transparent; /* Set border width and color */
-    border-top-color: var(--orange); /* Set the color of the top border to match the logo's background */
-    border-bottom-color: var(--orange); /* Set the color of the bottom border to match the logo's background */
+    overflow: hidden;
+    border: 0.6vmin solid transparent;
+    border-top-color: var(--orange);
+    border-bottom-color: var(--orange);
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    /* Define a hexagon shape using clip-path */
 }
 
 .Logo img {
-    width: 100%; /* Set the width to fill the container */
-    height: 100%; /* Maintain the aspect ratio */
+    width: 100%;
+    height: 100%; 
 }

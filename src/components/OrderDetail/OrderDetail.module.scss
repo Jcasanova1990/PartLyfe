@@ -50,16 +50,16 @@
 }
 
 .MenuList::-webkit-scrollbar {
-  width: 5px; /* Width of the scrollbar */
+  width: 5px;
   border-radius: 90px
 }
 
 .MenuList::-webkit-scrollbar-track {
-  background: rgba(255, 0, 0, 0); /* Color of the track */
+  background: rgba(255, 0, 0, 0);
   border-radius: 90px
 }
 
 .MenuList::-webkit-scrollbar-thumb {
-  background: var(--tan-4); /* Color of the thumb */
-  border-radius: 9px; /* Rounded corners of the thumb */
+  background: var(--tan-4);
+  border-radius: 9px;
 }

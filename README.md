@@ -29,7 +29,7 @@ Javascript
 
 This Starter Kit is being in this app.
 Go here to here to learn some cool stuff.
-[Big Poppa Code](arthurbernierjr.com)
+[Big Poppa Code](https://bigpoppacode.io/)
 
 # Reference Materials
 

@@ -84,24 +84,24 @@ code {
 }
 
 *::-webkit-scrollbar {
-  width: 5px; /* Width of the scrollbar */
+  width: 5px;
   border-radius: 90px
 }
 
 *::-webkit-scrollbar-track {
-  background: rgba(255, 0, 0, 0); /* Color of the track */
+  background: rgba(255, 0, 0, 0);
   border-radius: 90px
 }
 
 *::-webkit-scrollbar-thumb {
-  background: var(--tan-4); /* Color of the thumb */
-  border-radius: 9px; /* Rounded corners of the thumb */
+  background: var(--tan-4);
+  border-radius: 9px;
 }
 
 .filterInput:focus + .menuList {
   min-width: 100%;
   overflow-y: auto;
-  -webkit-min-width: 100%; /* For WebKit browsers */
+  -webkit-min-width: 100%;
 }
 
 .section-heading {
@@ -111,26 +111,26 @@ code {
   background-color: var(--tan-1);
   color: var(--text-dark);
   border-radius: 1vmin;
-  padding: .3vmin; /* Adjusted padding */
+  padding: .3vmin;
   text-align: center;
-  font-size: 1.5vmin; /* Adjusted font size */
+  font-size: 1.5vmin;
 }
 .MenuList {
   width: 50%;
   font-size: 0.5em;
-  // Add any other necessary styles
+
 }
 img {
   max-width: 100%;
-  margin-bottom: 1vmin; /* Adjusted margin */
+  margin-bottom: 1vmin; 
 }
 
 .Logo{
-  width: 40%; /* Adjusted width */
+  width: 40%; 
 }
 
 .form-container {
-  padding: 1.5vmin; /* Adjusted padding */
+  padding: 1.5vmin;
   background-color: var(--trans);
   border-radius: 1vmin;
   width: 500px ;
@@ -139,35 +139,35 @@ img {
 p.error-message {
   color: var(--orange);
   text-align: center;
-  font-size: 1.5vmin; /* Adjusted font size */
+  font-size: 1.5vmin;
 }
 
 form {
   width: 500px;
   display: grid;
   grid-template-columns: 1fr 3fr;
-  gap: 0.625vmin; /* Adjusted gap */
+  gap: 0.625vmin;
   color: var(--text-light);
-  margin: 0 auto; /* Center horizontally */
+  margin: 0 auto;
 }
 
 label {
   color: #f8fffc;
-  font-size: 1.5vmin; /* Adjusted font size */
+  font-size: 1.5vmin;
   display: flex;
   align-items: center;
 }
 
 input {
-  padding: 0.5vmin; /* Adjusted padding */
-  font-size: 1.5vmin; /* Adjusted font size */
+  padding: 0.5vmin;
+  font-size: 1.5vmin;
   color: var(--text-dark);
   background-image: none !important;
   outline: none;
 }
 
 input:focus {
-  border-color: var(--orange); /* You can remove this line if you don't want any focus border */
+  border-color: var(--orange);
 }
 
 
@@ -176,74 +176,73 @@ a.button,
 button.btn-sm,
 button.btn-xs {
   margin: 1vmin;
-  padding: 2vmin; /* Kept padding for buttons unchanged */
+  padding: 2vmin;
   color: var(--white);
   background-color: var(--orange);
-  font-size: 2vmin; /* Kept font size for buttons unchanged */
+  font-size: 2vmin;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  border-radius: 1vmin; /* Adjusted border-radius for square with curve */
+  border-radius: 1vmin;
   outline: none;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Added transition property */
-  border-bottom: #000000 2px solid; /* Added border-bottom property */
-  border-right: #000000 2px solid; /* Added border-right property */
+  transition: background-color 0.3s ease;
+  border-bottom: #000000 2px solid;
+  border-right: #000000 2px solid;
 }
 
 button.btn-sm {
   font-size: 1.5vmin;
-  padding: 1.2vmin 1.6vmin; /* Adjusted padding */
-  border-radius: 0.8vmin; /* Adjusted border-radius for square with curve */
+  padding: 1.2vmin 1.6vmin;
+  border-radius: 0.8vmin;
 }
 
 button.btn-xs {
   font-size: 1vmin;
-  padding: 0.8vmin 1vmin; /* Adjusted padding */
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Hexagon shape */
+  padding: 0.8vmin 1vmin;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 button:disabled,
 form:invalid button[type="submit"] {
   cursor: not-allowed;
   background-color: var(--tan-4);
-  border-radius: 1vmin; /* Adjusted border-radius for square with curve */
+  border-radius: 1vmin;
 }
 
 button[type="submit"] {
   grid-column: span 2;
   margin: 1vmin 0 0;
-  border-radius: 1vmin; /* Adjusted border-radius for square with curve */
+  border-radius: 1vmin;
 }
 
 button:hover,
 a.button:hover,
 button.btn-sm:hover,
 button.btn-xs:hover {
-  transform: translateY(-0.1vmin); /* Adjusted translateY */
-  box-shadow: 0 0.25vmin 0.5vmin rgba(6, 211, 16, 0.842); /* Adjusted box-shadow */
+  transform: translateY(-0.1vmin);
+  box-shadow: 0 0.25vmin 0.5vmin rgba(6, 211, 16, 0.842);
   color: var(--orange);
   background-color: var(--tan-4);
   animation: greenGlow 1s infinite;
-  border-radius: 1vmin; /* Adjusted border-radius for square with curve */
+  border-radius: 1vmin;
 }
-
-/* Green glow keyframes */
-@keyframes greenGlow {
-  0% {
-    box-shadow: 0 0 5px rgb(0, 255, 0); /* Adjusted box-shadow */
-  }
-  100% {
-    box-shadow: 0 0 5px rgb(0, 255, 0); /* Adjusted box-shadow */
-  }
-}
-
 
 @keyframes greenGlow {
   0% {
-    box-shadow: 0 0 5px rgb(0, 255, 0); /* Adjusted box-shadow */
+    box-shadow: 0 0 5px rgb(0, 255, 0);
   }
   100% {
-    box-shadow: 0 0 5px rgb(0, 255, 0); /* Adjusted box-shadow */
+    box-shadow: 0 0 5px rgb(0, 255, 0);
+  }
+}
+
+
+@keyframes greenGlow {
+  0% {
+    box-shadow: 0 0 5px rgb(0, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 5px rgb(0, 255, 0);
   }
 }

@@ -1,27 +1,27 @@
 .MenuListItem {
-  width: 76.8vh; /* Fixed width */
-  height: 10vh; /* Fixed height */
+  width: 76.8vh;
+  height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto 30px auto; /* Center horizontally and add fixed margin bottom */
-  padding: 20px; /* Fixed padding */
+  margin: 0 auto 30px auto;
+  padding: 20px;
   color: var(--text-light);
   background-color: var(--white);
   border: 2px solid rgba(0, 0, 0, 0);
-  border-radius: 20px; /* Fixed border radius */
-  font-size: 1vh; /* Fixed font size */
-  cursor: pointer; /* Added cursor pointer */
-  transition: box-shadow 0.3s ease; /* Added transition for box-shadow */
+  border-radius: 20px;
+  font-size: 1vh;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
 }
 
 .MenuListItem .image {
-  width: 10vh; /* Fixed width */
-  height: 10vh; /* Fixed height */
-  font-size: 60px; /* Fixed font size */
+  width: 10vh;
+  height: 10vh;
+  font-size: 60px;
   background-color: var(--tan-1);
   border: 2px solid var(--tan-3);
-  border-radius: 20px; /* Fixed border radius */
+  border-radius: 20px;
 }
 
 .MenuListItem .buy {
@@ -30,26 +30,26 @@
 }
 
 .MenuListItem .buy span {
-  font-size: 2vh; /* Fixed font size */
+  font-size: 2vh;
   text-align: center;
   color: var(--text-light);
 }
 
 .MenuListItem .name {
-  font-size: 2vh; /* Fixed font size */
+  font-size: 2vh;
   text-align: center;
   color: var(--text-light);
 }
 
 .MenuListItem:hover {
-  box-shadow: 0 0 10px rgb(0, 255, 0); /* Added glow effect on hover */
+  box-shadow: 0 0 10px rgb(0, 255, 0);
 }
 
 @keyframes greenGlow {
   0% {
-    box-shadow: 0 0 5px rgb(0, 255, 0); /* Adjusted box-shadow */
+    box-shadow: 0 0 5px rgb(0, 255, 0);
   }
   100% {
-    box-shadow: 0 0 5px rgb(0, 255, 0); /* Adjusted box-shadow */
+    box-shadow: 0 0 5px rgb(0, 255, 0);
   }
 }

@@ -20,17 +20,17 @@
     }
 
     .OrderList::-webkit-scrollbar {
-        width: 5px; /* Width of the scrollbar */
+        width: 5px;
         border-radius: 90px
       }
       
       .OrderList::-webkit-scrollbar-track {
-        background: var(--trans); /* Color of the track */
+        background: var(--trans);
         border-radius: 90px
       }
       
       .OrderList::-webkit-scrollbar-thumb {
-        background: var(--tan-4); /* Color of the thumb */
-        border-radius: 9px; /* Rounded corners of the thumb */
+        background: var(--tan-4);
+        border-radius: 9px;
       }
       

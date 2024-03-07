@@ -3,11 +3,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0); /* Adjust the alpha value for transparency */
+  background-color: rgba(255, 255, 255, 0);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow effect */
-  z-index: 9999; /* Adjust the z-index as needed */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
 
   form {
     display: flex;

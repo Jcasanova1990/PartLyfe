@@ -20,12 +20,12 @@
   align-items: center;
   justify-content: center;
   line-height: 50px;
-  margin-left: 230%; /* Adjust this value as needed */
+  margin-left: 230%;
   margin-bottom: -25%;
   width: 100%;
   transition: background-color 0.3s ease;
-  border-bottom: 2px solid black; /* Corrected border syntax */
-  border-right: 2px solid black; /* Corrected border syntax */
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
 }
 
 .AuthPage h3:hover {
@@ -36,7 +36,6 @@
   animation: green-glow 1s infinite alternate;
 }
 
-/* Green glow keyframes */
 @keyframes green-glow {
   0% {
     box-shadow: 0 0 10px rgb(0, 255, 0);

@@ -11,7 +11,7 @@
     border-radius: 1vmin;
     font-size: 2vmin;
     cursor: pointer;
-    transition: box-shadow 0.3s ease; /* Added transition for box-shadow */
+    transition: box-shadow 0.3s ease;
 }
 
 .OrderListItem > div > div:first-child {
@@ -27,14 +27,14 @@
 .OrderListItem:not(.selected):hover {
     border-color: var(--orange);
     border-width: .2vmin;
-    box-shadow: 0 0 10px rgb(0, 255, 0); /* Added glow effect on hover */
+    box-shadow: 0 0 10px rgb(0, 255, 0);
 }
 
 @keyframes greenGlow {
     0% {
-      box-shadow: 0 0 5px rgb(0, 255, 0); /* Adjusted box-shadow */
+      box-shadow: 0 0 5px rgb(0, 255, 0);
     }
     100% {
-      box-shadow: 0 0 5px rgb(0, 255, 0); /* Adjusted box-shadow */
+      box-shadow: 0 0 5px rgb(0, 255, 0);
     }
 }
