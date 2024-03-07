@@ -83,6 +83,21 @@ code {
   overflow-y: scroll;
 }
 
+*::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+  border-radius: 90px
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(255, 0, 0, 0); /* Color of the track */
+  border-radius: 90px
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--tan-4); /* Color of the thumb */
+  border-radius: 9px; /* Rounded corners of the thumb */
+}
+
 .section-heading {
   display: flex;
   justify-content: space-around;
@@ -166,6 +181,8 @@ button.btn-xs {
   outline: none;
   cursor: pointer;
   transition: background-color 0.3s ease; /* Added transition property */
+  border-bottom: #000000 2px solid; /* Added border-bottom property */
+  border-right: #000000 2px solid; /* Added border-right property */
 }
 
 button.btn-sm {

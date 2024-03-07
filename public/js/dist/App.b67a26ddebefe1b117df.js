@@ -1044,10 +1044,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.l8hJyaPvo9smd6LiNqWK {
   align-items: center; /* Center items vertically */
   position: fixed; /* Position the list fixed to stay at the top */
   top: -0.9vh; /* Position the list at the very top of the page */
-  left: 20.4%; /* Position the list at the very left of the page */
+  left: 40.2vmin; /* Position the list at the very left of the page */
   width: 42.4%; /* Make the list take the full width of the page */
-  border: 2px solid rgb(0, 0, 0); /* Add green solid border */
-  border-radius: 10px;
+  border-right: 9.8px solid #88c93e;
+  border-left: 9.8px solid #88c93e;
   background-color: rgb(0, 0, 0); /* Fill the inside of the border */
 }
 
@@ -1070,7 +1070,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.l8hJyaPvo9smd6LiNqWK {
   background-color: var(--tan-1);
   border: 0.1vmin solid var(--tan-3);
   padding: 0.6vmin; /* Maintain the same padding as other list items */
-}`, "",{"version":3,"sources":["webpack://./src/components/CategoryList/CategoryList.module.scss"],"names":[],"mappings":"AAAA;EACI,wBAAA;EACA,gBAAA;EACA,UAAA;EACA,gBAAA;EACA,aAAA,EAAA,wBAAA;EACA,mBAAA,EAAA,8BAAA;EACA,uBAAA,EAAA,8BAAA;EACA,mBAAA,EAAA,4BAAA;EACA,eAAA,EAAA,+CAAA;EACA,WAAA,EAAA,kDAAA;EACA,WAAA,EAAA,mDAAA;EACA,YAAA,EAAA,kDAAA;EACA,8BAAA,EAAA,2BAAA;EACA,mBAAA;EACA,8BAAA,EAAA,kCAAA;AACJ;;AAEA;EACI,gBAAA;EACA,kBAAA;EACA,sBAAA;EACA,qBAAA,EAAA,qDAAA;EACA,YAAA,EAAA,0CAAA;AACJ;;AAEA;EACI,eAAA;EACA,+BAAA;EACA,mBAAA;AACJ;;AAEA;EACI,uBAAA;EACA,8BAAA;EACA,kCAAA;EACA,gBAAA,EAAA,kDAAA;AACJ","sourcesContent":[".CategoryList {\n    color: var(--text-light);\n    list-style: none;\n    padding: 0;\n    font-size: 1.7vw;\n    display: flex; /* Set display to flex */\n    flex-direction: row; /* Set flex direction to row */\n    justify-content: center; /* Center items horizontally */\n    align-items: center; /* Center items vertically */\n    position: fixed; /* Position the list fixed to stay at the top */\n    top: -0.9vh; /* Position the list at the very top of the page */\n    left: 20.4%; /* Position the list at the very left of the page */\n    width: 42.4%; /* Make the list take the full width of the page */\n    border: 2px solid rgb(0, 0, 0); /* Add green solid border */\n    border-radius: 10px;\n    background-color: rgb(0, 0, 0); /* Fill the inside of the border */\n}\n\n.CategoryList li {\n    padding: .6vmin;\n    text-align: center;\n    border-radius: .5vmin;\n    margin-right: .5vmin; /* Add margin-right to create spacing between items */\n    height: 60px; /* Set a fixed height for all list items */\n}\n\n.CategoryList li:hover:not(.active) {\n    cursor: pointer;\n    background-color: var(--orange);\n    color: var(--white);\n}\n\n.CategoryList li.active {\n    color: var(--text-dark);\n    background-color: var(--tan-1);\n    border: .1vmin solid var(--tan-3);\n    padding: .6vmin; /* Maintain the same padding as other list items */\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/CategoryList/CategoryList.module.scss"],"names":[],"mappings":"AAAA;EACI,wBAAA;EACA,gBAAA;EACA,UAAA;EACA,gBAAA;EACA,aAAA,EAAA,wBAAA;EACA,mBAAA,EAAA,8BAAA;EACA,uBAAA,EAAA,8BAAA;EACA,mBAAA,EAAA,4BAAA;EACA,eAAA,EAAA,+CAAA;EACA,WAAA,EAAA,kDAAA;EACA,cAAA,EAAA,mDAAA;EACA,YAAA,EAAA,kDAAA;EACA,iCAAA;EACA,gCAAA;EACA,8BAAA,EAAA,kCAAA;AACJ;;AAEA;EACI,gBAAA;EACA,kBAAA;EACA,sBAAA;EACA,qBAAA,EAAA,qDAAA;EACA,YAAA,EAAA,0CAAA;AACJ;;AAEA;EACI,eAAA;EACA,+BAAA;EACA,mBAAA;AACJ;;AAEA;EACI,uBAAA;EACA,8BAAA;EACA,kCAAA;EACA,gBAAA,EAAA,kDAAA;AACJ","sourcesContent":[".CategoryList {\n    color: var(--text-light);\n    list-style: none;\n    padding: 0;\n    font-size: 1.7vw;\n    display: flex; /* Set display to flex */\n    flex-direction: row; /* Set flex direction to row */\n    justify-content: center; /* Center items horizontally */\n    align-items: center; /* Center items vertically */\n    position: fixed; /* Position the list fixed to stay at the top */\n    top: -0.9vh; /* Position the list at the very top of the page */\n    left: 40.2vmin; /* Position the list at the very left of the page */\n    width: 42.4%; /* Make the list take the full width of the page */\n    border-right: 9.8px solid #88c93e;\n    border-left: 9.8px solid #88c93e;\n    background-color: rgb(0, 0, 0); /* Fill the inside of the border */\n}\n\n.CategoryList li {\n    padding: .6vmin;\n    text-align: center;\n    border-radius: .5vmin;\n    margin-right: .5vmin; /* Add margin-right to create spacing between items */\n    height: 60px; /* Set a fixed height for all list items */\n}\n\n.CategoryList li:hover:not(.active) {\n    cursor: pointer;\n    background-color: var(--orange);\n    color: var(--white);\n}\n\n.CategoryList li.active {\n    color: var(--text-dark);\n    background-color: var(--tan-1);\n    border: .1vmin solid var(--tan-3);\n    padding: .6vmin; /* Maintain the same padding as other list items */\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"CategoryList": `l8hJyaPvo9smd6LiNqWK`,
@@ -1206,7 +1206,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `.eBz5FvD9TgyIgfFi1MdG {
   background-color: var(--tan-1);
-  border-radius: 2vmin;
+  border-radius: 1vmin;
   margin: 6vmin 0; /* Increase the top margin to move it down */
   padding: 3vmin;
   overflow-y: scroll;
@@ -1214,19 +1214,19 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.eBz5FvD9TgyIgfFi1MdG {
 }
 
 .eBz5FvD9TgyIgfFi1MdG::-webkit-scrollbar {
-  width: 5px; /* Width of the scrollbar */
+  width: 9.8px; /* Width of the scrollbar */
   border-radius: 90px;
 }
 
 .eBz5FvD9TgyIgfFi1MdG::-webkit-scrollbar-track {
-  background: var(--orange); /* Color of the track */
+  background: rgba(255, 0, 0, 0); /* Color of the track */
   border-radius: 90px;
 }
 
 .eBz5FvD9TgyIgfFi1MdG::-webkit-scrollbar-thumb {
   background: var(--tan-4); /* Color of the thumb */
   border-radius: 9px; /* Rounded corners of the thumb */
-}`, "",{"version":3,"sources":["webpack://./src/components/MenuList/MenuList.module.scss"],"names":[],"mappings":"AAAA;EACE,8BAAA;EACA,oBAAA;EACA,eAAA,EAAA,4CAAA;EACA,cAAA;EACA,kBAAA;EACA,WAAA;AACF;;AAEA;EACE,UAAA,EAAA,2BAAA;EACA,mBAAA;AACF;;AAEA;EACE,yBAAA,EAAA,uBAAA;EACA,mBAAA;AACF;;AAEA;EACE,wBAAA,EAAA,uBAAA;EACA,kBAAA,EAAA,iCAAA;AACF","sourcesContent":[".MenuList {\n  background-color: var(--tan-1);\n  border-radius: 2vmin;\n  margin: 6vmin 0; /* Increase the top margin to move it down */\n  padding: 3vmin;\n  overflow-y: scroll;\n  height: 83%;\n}\n\n.MenuList::-webkit-scrollbar {\n  width: 5px; /* Width of the scrollbar */\n  border-radius: 90px\n}\n\n.MenuList::-webkit-scrollbar-track {\n  background: var(--orange); /* Color of the track */\n  border-radius: 90px\n}\n\n.MenuList::-webkit-scrollbar-thumb {\n  background: var(--tan-4); /* Color of the thumb */\n  border-radius: 9px; /* Rounded corners of the thumb */\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/MenuList/MenuList.module.scss"],"names":[],"mappings":"AAAA;EACE,8BAAA;EACA,oBAAA;EACA,eAAA,EAAA,4CAAA;EACA,cAAA;EACA,kBAAA;EACA,WAAA;AACF;;AAEA;EACE,YAAA,EAAA,2BAAA;EACA,mBAAA;AACF;;AAEA;EACE,8BAAA,EAAA,uBAAA;EACA,mBAAA;AACF;;AAEA;EACE,wBAAA,EAAA,uBAAA;EACA,kBAAA,EAAA,iCAAA;AACF","sourcesContent":[".MenuList {\n  background-color: var(--tan-1);\n  border-radius: 1vmin;\n  margin: 6vmin 0; /* Increase the top margin to move it down */\n  padding: 3vmin;\n  overflow-y: scroll;\n  height: 83%;\n}\n\n.MenuList::-webkit-scrollbar {\n  width: 9.8px; /* Width of the scrollbar */\n  border-radius: 90px\n}\n\n.MenuList::-webkit-scrollbar-track {\n  background: rgba(255, 0, 0, 0); /* Color of the track */\n  border-radius: 90px\n}\n\n.MenuList::-webkit-scrollbar-thumb {\n  background: var(--tan-4); /* Color of the thumb */\n  border-radius: 9px; /* Rounded corners of the thumb */\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"MenuList": `eBz5FvD9TgyIgfFi1MdG`
@@ -1347,6 +1347,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.cPR75kdAXDGVxib0PszB {
   padding: 3vmin;
   font-size: 2vmin;
   color: var(--text-light);
+  overflow-y: scroll;
 }
 
 .cPR75kdAXDGVxib0PszB .ap70fWT3eETsAtLlRQKl {
@@ -1386,7 +1387,22 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.cPR75kdAXDGVxib0PszB {
   position: absolute;
   top: 50vh;
   font-size: 2vmin;
-}`, "",{"version":3,"sources":["webpack://./src/components/OrderDetail/OrderDetail.module.scss"],"names":[],"mappings":"AAAA;EACI,sBAAA;EACA,2BAAA;EACA,mBAAA;EACA,cAAA;EACA,gBAAA;EACA,wBAAA;AACJ;;AAEE;EACE,WAAA;AACJ;;AAGE;EACE,iBAAA;EACA,2BAAA;EACA,4BAAA;EACA,WAAA;AAAJ;;AAGE;EACE,WAAA;EACA,aAAA;EACA,4CAAA;EACA,gBAAA;EACA,wBAAA;EACA,sCAAA;AAAJ;;AAGE;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,cAAA;EACA,uBAAA;AAAJ;;AAIE;EACE,aAAA;EACA,yBAAA;AADJ;;AAIE;EACE,kBAAA;EACA,SAAA;EACA,gBAAA;AADJ","sourcesContent":[".OrderDetail {\n    flex-direction: column;\n    justify-content: flex-start;\n    align-items: center;\n    padding: 3vmin;\n    font-size: 2vmin;\n    color: var(--text-light);\n  }\n  \n  .OrderDetail .sectionHeading {\n    width: 100%;\n    \n  }\n  \n  .OrderDetail .lineItemContainer {\n    margin-top: 3vmin;\n    justify-content: flex-start;\n    height: calc(100vh - 18vmin);\n    width: 100%;\n  }\n  \n  .OrderDetail .total {\n    width: 100%;\n    display: grid;\n    grid-template-columns: 18.35vw 5.75vw 5.25vw;\n    padding: 1vmin 0;\n    color: var(--text-light);\n    border-top: .1vmin solid var(--tan-3);\n  }\n  \n  .OrderDetail .total span {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    font-size: 1vw;\n    color: var(--text-dark);\n    \n  }\n  \n  .OrderDetail .total span.right {\n    display: flex;\n    justify-content: flex-end;\n  }\n  \n  .OrderDetail .hungry {\n    position: absolute;\n    top: 50vh;\n    font-size: 2vmin;\n  }\n\n  "],"sourceRoot":""}]);
+}
+
+.beQ1gxpMBiH_LhHx5jqh::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+  border-radius: 90px;
+}
+
+.beQ1gxpMBiH_LhHx5jqh::-webkit-scrollbar-track {
+  background: rgba(255, 0, 0, 0); /* Color of the track */
+  border-radius: 90px;
+}
+
+.beQ1gxpMBiH_LhHx5jqh::-webkit-scrollbar-thumb {
+  background: var(--tan-4); /* Color of the thumb */
+  border-radius: 9px; /* Rounded corners of the thumb */
+}`, "",{"version":3,"sources":["webpack://./src/components/OrderDetail/OrderDetail.module.scss"],"names":[],"mappings":"AAAA;EACE,sBAAA;EACA,2BAAA;EACA,mBAAA;EACA,cAAA;EACA,gBAAA;EACA,wBAAA;EACA,kBAAA;AACF;;AAEA;EACE,WAAA;AACF;;AAGA;EACE,iBAAA;EACA,2BAAA;EACA,4BAAA;EACA,WAAA;AAAF;;AAGA;EACE,WAAA;EACA,aAAA;EACA,4CAAA;EACA,gBAAA;EACA,wBAAA;EACA,sCAAA;AAAF;;AAGA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,cAAA;EACA,uBAAA;AAAF;;AAIA;EACE,aAAA;EACA,yBAAA;AADF;;AAIA;EACE,kBAAA;EACA,SAAA;EACA,gBAAA;AADF;;AAIA;EACE,UAAA,EAAA,2BAAA;EACA,mBAAA;AADF;;AAIA;EACE,8BAAA,EAAA,uBAAA;EACA,mBAAA;AADF;;AAIA;EACE,wBAAA,EAAA,uBAAA;EACA,kBAAA,EAAA,iCAAA;AADF","sourcesContent":[".OrderDetail {\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center;\n  padding: 3vmin;\n  font-size: 2vmin;\n  color: var(--text-light);\n  overflow-y: scroll;\n}\n\n.OrderDetail .sectionHeading {\n  width: 100%;\n  \n}\n\n.OrderDetail .lineItemContainer {\n  margin-top: 3vmin;\n  justify-content: flex-start;\n  height: calc(100vh - 18vmin);\n  width: 100%;\n}\n\n.OrderDetail .total {\n  width: 100%;\n  display: grid;\n  grid-template-columns: 18.35vw 5.75vw 5.25vw;\n  padding: 1vmin 0;\n  color: var(--text-light);\n  border-top: .1vmin solid var(--tan-3);\n}\n\n.OrderDetail .total span {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 1vw;\n  color: var(--text-dark);\n  \n}\n\n.OrderDetail .total span.right {\n  display: flex;\n  justify-content: flex-end;\n}\n\n.OrderDetail .hungry {\n  position: absolute;\n  top: 50vh;\n  font-size: 2vmin;\n}\n\n.MenuList::-webkit-scrollbar {\n  width: 5px; /* Width of the scrollbar */\n  border-radius: 90px\n}\n\n.MenuList::-webkit-scrollbar-track {\n  background: rgba(255, 0, 0, 0); /* Color of the track */\n  border-radius: 90px\n}\n\n.MenuList::-webkit-scrollbar-thumb {\n  background: var(--tan-4); /* Color of the thumb */\n  border-radius: 9px; /* Rounded corners of the thumb */\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"OrderDetail": `cPR75kdAXDGVxib0PszB`,
@@ -1394,7 +1410,8 @@ ___CSS_LOADER_EXPORT___.locals = {
 	"lineItemContainer": `vVkqXbRqxMYDCnUttflb`,
 	"total": `V5OAbv7QFHo6WglNx0m0`,
 	"right": `GtULiQQdndLNSQN4Yc97`,
-	"hungry": `dyrUhYTujwEUiMzpjxWX`
+	"hungry": `dyrUhYTujwEUiMzpjxWX`,
+	"MenuList": `beQ1gxpMBiH_LhHx5jqh`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1425,10 +1442,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.l6Ner7C7O5I4V69HVVgW {
   align-items: center;
   background-color: var(--tan-1);
   border: 0.1vmin solid var(--tan-3);
-  border-radius: 2vmin;
+  border-radius: 1vmin;
   margin: 3vmin 0;
   padding: 3vmin;
   height: 80%;
+  width: 100%;
   overflow-y: scroll;
 }
 
@@ -1445,14 +1463,14 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.l6Ner7C7O5I4V69HVVgW {
 }
 
 .l6Ner7C7O5I4V69HVVgW::-webkit-scrollbar-track {
-  background: var(--orange); /* Color of the track */
+  background: var(--trans); /* Color of the track */
   border-radius: 90px;
 }
 
 .l6Ner7C7O5I4V69HVVgW::-webkit-scrollbar-thumb {
   background: var(--tan-4); /* Color of the thumb */
   border-radius: 9px; /* Rounded corners of the thumb */
-}`, "",{"version":3,"sources":["webpack://./src/components/OrderList/OrderList.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,8BAAA;EACA,kCAAA;EACA,oBAAA;EACA,eAAA;EACA,cAAA;EACA,WAAA;EACA,kBAAA;AACJ;;AAEI;EACA,wBAAA;EACA,gBAAA;EACA,kBAAA;EACA,SAAA;AACJ;;AAEI;EACI,UAAA,EAAA,2BAAA;EACA,mBAAA;AACR;;AAEM;EACE,yBAAA,EAAA,uBAAA;EACA,mBAAA;AACR;;AAEM;EACE,wBAAA,EAAA,uBAAA;EACA,kBAAA,EAAA,iCAAA;AACR","sourcesContent":[".OrderList {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    background-color: var(--tan-1);\n    border: .1vmin solid var(--tan-3);\n    border-radius: 2vmin;\n    margin: 3vmin 0;\n    padding: 3vmin;\n    height: 80%;\n    overflow-y: scroll;\n    }\n    \n    .OrderList .noOrders {\n    color: var(--text-light);\n    font-size: 5vmin;\n    position: absolute;\n    top: calc(50vh);\n    }\n\n    .OrderList::-webkit-scrollbar {\n        width: 5px; /* Width of the scrollbar */\n        border-radius: 90px\n      }\n      \n      .OrderList::-webkit-scrollbar-track {\n        background: var(--orange); /* Color of the track */\n        border-radius: 90px\n      }\n      \n      .OrderList::-webkit-scrollbar-thumb {\n        background: var(--tan-4); /* Color of the thumb */\n        border-radius: 9px; /* Rounded corners of the thumb */\n      }\n      "],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/OrderList/OrderList.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,8BAAA;EACA,kCAAA;EACA,oBAAA;EACA,eAAA;EACA,cAAA;EACA,WAAA;EACA,WAAA;EACA,kBAAA;AACJ;;AAEI;EACA,wBAAA;EACA,gBAAA;EACA,kBAAA;EACA,SAAA;AACJ;;AAEI;EACI,UAAA,EAAA,2BAAA;EACA,mBAAA;AACR;;AAEM;EACE,wBAAA,EAAA,uBAAA;EACA,mBAAA;AACR;;AAEM;EACE,wBAAA,EAAA,uBAAA;EACA,kBAAA,EAAA,iCAAA;AACR","sourcesContent":[".OrderList {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    background-color: var(--tan-1);\n    border: .1vmin solid var(--tan-3);\n    border-radius: 1vmin;\n    margin: 3vmin 0;\n    padding: 3vmin;\n    height: 80%;\n    width: 100%;\n    overflow-y: scroll;\n    }\n    \n    .OrderList .noOrders {\n    color: var(--text-light);\n    font-size: 5vmin;\n    position: absolute;\n    top: calc(50vh);\n    }\n\n    .OrderList::-webkit-scrollbar {\n        width: 5px; /* Width of the scrollbar */\n        border-radius: 90px\n      }\n      \n      .OrderList::-webkit-scrollbar-track {\n        background: var(--trans); /* Color of the track */\n        border-radius: 90px\n      }\n      \n      .OrderList::-webkit-scrollbar-thumb {\n        background: var(--tan-4); /* Color of the thumb */\n        border-radius: 9px; /* Rounded corners of the thumb */\n      }\n      "],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"OrderList": `l6Ner7C7O5I4V69HVVgW`,

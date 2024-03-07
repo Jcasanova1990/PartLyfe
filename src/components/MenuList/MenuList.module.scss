@@ -1,6 +1,6 @@
 .MenuList {
   background-color: var(--tan-1);
-  border-radius: 2vmin;
+  border-radius: 1vmin;
   margin: 6vmin 0; /* Increase the top margin to move it down */
   padding: 3vmin;
   overflow-y: scroll;
@@ -8,12 +8,12 @@
 }
 
 .MenuList::-webkit-scrollbar {
-  width: 5px; /* Width of the scrollbar */
+  width: 9.8px; /* Width of the scrollbar */
   border-radius: 90px
 }
 
 .MenuList::-webkit-scrollbar-track {
-  background: var(--orange); /* Color of the track */
+  background: rgba(255, 0, 0, 0); /* Color of the track */
   border-radius: 90px
 }
 

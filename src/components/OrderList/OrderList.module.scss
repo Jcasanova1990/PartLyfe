@@ -4,10 +4,11 @@
     align-items: center;
     background-color: var(--tan-1);
     border: .1vmin solid var(--tan-3);
-    border-radius: 2vmin;
+    border-radius: 1vmin;
     margin: 3vmin 0;
     padding: 3vmin;
     height: 80%;
+    width: 100%;
     overflow-y: scroll;
     }
     
@@ -24,7 +25,7 @@
       }
       
       .OrderList::-webkit-scrollbar-track {
-        background: var(--orange); /* Color of the track */
+        background: var(--trans); /* Color of the track */
         border-radius: 90px
       }
       

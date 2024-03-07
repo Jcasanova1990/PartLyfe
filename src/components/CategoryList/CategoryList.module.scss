@@ -9,10 +9,10 @@
     align-items: center; /* Center items vertically */
     position: fixed; /* Position the list fixed to stay at the top */
     top: -0.9vh; /* Position the list at the very top of the page */
-    left: 20.4%; /* Position the list at the very left of the page */
+    left: 40.2vmin; /* Position the list at the very left of the page */
     width: 42.4%; /* Make the list take the full width of the page */
-    border: 2px solid rgb(0, 0, 0); /* Add green solid border */
-    border-radius: 10px;
+    border-right: 9.8px solid #88c93e;
+    border-left: 9.8px solid #88c93e;
     background-color: rgb(0, 0, 0); /* Fill the inside of the border */
 }
 
