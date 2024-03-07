@@ -21,3 +21,16 @@
   background: var(--tan-4); /* Color of the thumb */
   border-radius: 9px; /* Rounded corners of the thumb */
 }
+.filterInput {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+p {
+  color: white;
+  text-align: center;
+}

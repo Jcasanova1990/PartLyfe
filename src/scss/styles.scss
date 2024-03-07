@@ -98,6 +98,12 @@ code {
   border-radius: 9px; /* Rounded corners of the thumb */
 }
 
+.filterInput:focus + .menuList {
+  min-width: 100%;
+  overflow-y: auto;
+  -webkit-min-width: 100%; /* For WebKit browsers */
+}
+
 .section-heading {
   display: flex;
   justify-content: space-around;

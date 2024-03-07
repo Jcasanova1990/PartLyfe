@@ -195,9 +195,11 @@ function Logo() {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ MenuList)
 /* harmony export */ });
-/* harmony import */ var _MenuList_module_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MenuList.module.scss */ "./src/components/MenuList/MenuList.module.scss");
-/* harmony import */ var _MenuListItem_MenuListItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../MenuListItem/MenuListItem */ "./src/components/MenuListItem/MenuListItem.js");
-/* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _MenuList_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MenuList.module.scss */ "./src/components/MenuList/MenuList.module.scss");
+/* harmony import */ var _MenuListItem_MenuListItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../MenuListItem/MenuListItem */ "./src/components/MenuListItem/MenuListItem.js");
+
 
 
 function MenuList(_ref) {
@@ -205,14 +207,22 @@ function MenuList(_ref) {
     menuItems,
     handleAddToOrder
   } = _ref;
-  const items = menuItems.map(item => /*#__PURE__*/React.createElement(_MenuListItem_MenuListItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  const [filterText, setFilterText] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');
+  const filteredItems = menuItems.filter(item => item.name.toLowerCase().includes(filterText.toLowerCase()));
+  const items = filteredItems.map(item => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_MenuListItem_MenuListItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
     key: item._id,
     handleAddToOrder: handleAddToOrder,
     menuItem: item
   }));
-  return /*#__PURE__*/React.createElement("main", {
-    className: _MenuList_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].MenuList
-  }, items);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", {
+    className: _MenuList_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].MenuList
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    type: "text",
+    placeholder: "Filter Menu Items",
+    className: _MenuList_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].filterInput,
+    value: filterText,
+    onChange: e => setFilterText(e.target.value)
+  }), items.length > 0 ? items : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "No items found."));
 }
 
 /***/ }),
@@ -1226,10 +1236,25 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.eBz5FvD9TgyIgfFi1MdG {
 .eBz5FvD9TgyIgfFi1MdG::-webkit-scrollbar-thumb {
   background: var(--tan-4); /* Color of the thumb */
   border-radius: 9px; /* Rounded corners of the thumb */
-}`, "",{"version":3,"sources":["webpack://./src/components/MenuList/MenuList.module.scss"],"names":[],"mappings":"AAAA;EACE,8BAAA;EACA,oBAAA;EACA,eAAA,EAAA,4CAAA;EACA,cAAA;EACA,kBAAA;EACA,WAAA;AACF;;AAEA;EACE,YAAA,EAAA,2BAAA;EACA,mBAAA;AACF;;AAEA;EACE,8BAAA,EAAA,uBAAA;EACA,mBAAA;AACF;;AAEA;EACE,wBAAA,EAAA,uBAAA;EACA,kBAAA,EAAA,iCAAA;AACF","sourcesContent":[".MenuList {\n  background-color: var(--tan-1);\n  border-radius: 1vmin;\n  margin: 6vmin 0; /* Increase the top margin to move it down */\n  padding: 3vmin;\n  overflow-y: scroll;\n  height: 83%;\n}\n\n.MenuList::-webkit-scrollbar {\n  width: 9.8px; /* Width of the scrollbar */\n  border-radius: 90px\n}\n\n.MenuList::-webkit-scrollbar-track {\n  background: rgba(255, 0, 0, 0); /* Color of the track */\n  border-radius: 90px\n}\n\n.MenuList::-webkit-scrollbar-thumb {\n  background: var(--tan-4); /* Color of the thumb */\n  border-radius: 9px; /* Rounded corners of the thumb */\n}\n"],"sourceRoot":""}]);
+}
+
+.hfev2BNGBeK6d4JR2WqN {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+p {
+  color: white;
+  text-align: center;
+}`, "",{"version":3,"sources":["webpack://./src/components/MenuList/MenuList.module.scss"],"names":[],"mappings":"AAAA;EACE,8BAAA;EACA,oBAAA;EACA,eAAA,EAAA,4CAAA;EACA,cAAA;EACA,kBAAA;EACA,WAAA;AACF;;AAEA;EACE,YAAA,EAAA,2BAAA;EACA,mBAAA;AACF;;AAEA;EACE,8BAAA,EAAA,uBAAA;EACA,mBAAA;AACF;;AAEA;EACE,wBAAA,EAAA,uBAAA;EACA,kBAAA,EAAA,iCAAA;AACF;;AACA;EACE,WAAA;EACA,YAAA;EACA,mBAAA;EACA,sBAAA;EACA,kBAAA;EACA,sBAAA;AAEF;;AACA;EACE,YAAA;EACA,kBAAA;AAEF","sourcesContent":[".MenuList {\n  background-color: var(--tan-1);\n  border-radius: 1vmin;\n  margin: 6vmin 0; /* Increase the top margin to move it down */\n  padding: 3vmin;\n  overflow-y: scroll;\n  height: 83%;\n}\n\n.MenuList::-webkit-scrollbar {\n  width: 9.8px; /* Width of the scrollbar */\n  border-radius: 90px\n}\n\n.MenuList::-webkit-scrollbar-track {\n  background: rgba(255, 0, 0, 0); /* Color of the track */\n  border-radius: 90px\n}\n\n.MenuList::-webkit-scrollbar-thumb {\n  background: var(--tan-4); /* Color of the thumb */\n  border-radius: 9px; /* Rounded corners of the thumb */\n}\n.filterInput {\n  width: 100%;\n  padding: 8px;\n  margin-bottom: 10px;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  box-sizing: border-box;\n}\n\np {\n  color: white;\n  text-align: center;\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
-	"MenuList": `eBz5FvD9TgyIgfFi1MdG`
+	"MenuList": `eBz5FvD9TgyIgfFi1MdG`,
+	"filterInput": `hfev2BNGBeK6d4JR2WqN`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
