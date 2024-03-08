@@ -58,7 +58,7 @@ Go here to here to learn some cool stuff.
 
 # IceBox
 
-Add a Library from https://www.npmjs.com/ to size up the available item list.  Create pages for each item that displays item image, specs, item, description, compatibility, price, add to cart, then have cart appear on right when item is added.  Add stripe functions to purchase items and send email for order to user email.  Increase security and add admin privileges for item edit order edit as well as standard user edit.  Add contact us page.  Add back to top button and list display option 5, 10, 20 for items on menu list.  
+Add a Library from https://www.npmjs.com/ to size up the available item list.  Create pages for each item that displays item image, specs, item, description, compatibility, price, add to cart, then have cart appear on right when item is added.  Add stripe functions to purchase items and send email for order to user email.  Increase security and add admin privileges for item edit order edit as well as standard user edit.  Add contact us page.  Add back to top button and list display option 5, 10, 20 for items on menu list. make scaling for mobile devices.
 
 
                                                     ----IMPORTANT----
