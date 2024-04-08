@@ -38,3 +38,41 @@
       box-shadow: 0 0 5px rgb(0, 255, 0);
     }
 }
+
+    /*Mobile*/
+    @media screen and (max-width: 425px) {
+        .OrderListItem {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3vmin;
+            padding: 2vmin;
+            color: var(--text-light);
+            background-color: var(--trans);
+            border: .2vmin solid var(--tan-3);
+            border-radius: 1vmin;
+            font-size: 2vmin;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease;
+    }
+}
+    /*tablet */
+@media screen and (min-width:426) and (max-width: 769px) {
+
+}
+
+/* Laptop */
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+
+}
+
+/* Medium desktop */
+@media screen and (min-width: 1440px) and (max-width: 2559px) {
+
+}
+
+/* 4K display */
+@media screen and (min-width: 2560px) {
+
+}

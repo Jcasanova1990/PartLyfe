@@ -3,14 +3,11 @@
     list-style: none;
     padding: 0;
     font-size: 1.7vw;
-    display: flex; 
-    flex-direction: row; 
+    display: flex;
+    flex-direction: column; 
     justify-content: center; 
     align-items: center; 
-    position: fixed; 
-    top: -0.9vh; 
-    left: 40.2vmin; 
-    width: 42.4%; 
+    width: 150%; 
     border-right: 9.8px solid #88c93e;
     border-left: 9.8px solid #88c93e;
     background-color: rgb(0, 0, 0); 
@@ -35,4 +32,73 @@
     background-color: var(--tan-1);
     border: .1vmin solid var(--tan-3);
     padding: .6vmin;
+}
+
+/*Mobile/tablet */
+@media screen and (max-width: 768px) {
+    .CategoryList {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 150%;
+        margin-top: 290%;
+        margin-left: -45%;
+        height: auto;
+        border-right: 1.5vw solid #88c93e;
+        border-left: 1.5vw solid #88c93e;
+        overflow-y: auto; 
+        max-height: 100vh; 
+    }
+}
+
+/* Laptop */
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .CategoryList {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: -10%;
+        width: 130%;
+        height: auto;
+        border-right: 1.5vw solid #88c93e;
+        border-left: 1.5vw solid #88c93e;
+        overflow-y: auto; 
+        max-height: 100vh; 
+    }
+}
+
+/* Medium desktop */
+@media screen and (min-width: 1440px) and (max-width: 2559px) {
+    .CategoryList {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: -7.4%;
+        width: 120%;
+        height: auto;
+        border-right: .7vw solid #88c93e;
+        border-left: .7vw solid #88c93e;
+        overflow-y: auto; 
+        max-height: 100vh; 
+    }
+}
+
+/* 4K display */
+@media screen and (min-width: 2560px) {
+    .CategoryList {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: -7.4%;
+        width: 120%;
+        height: auto;
+        border-right: .7vw solid #88c93e;
+        border-left: .7vw solid #88c93e;
+        overflow-y: auto; 
+        max-height: 100vh; 
+    }
 }
